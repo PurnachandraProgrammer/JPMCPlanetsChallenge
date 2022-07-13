@@ -1,0 +1,728 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D8298264287E6B0C00FB56BD /* JPPlanets.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8298262287E6B0C00FB56BD /* JPPlanets.xcdatamodeld */; };
+		D8CCF2FE287C32E400EF9EC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CCF2FD287C32E400EF9EC1 /* AppDelegate.swift */; };
+		D8CCF300287C32E400EF9EC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CCF2FF287C32E400EF9EC1 /* SceneDelegate.swift */; };
+		D8CCF305287C32E400EF9EC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8CCF303287C32E400EF9EC1 /* Main.storyboard */; };
+		D8CCF307287C32E600EF9EC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8CCF306287C32E600EF9EC1 /* Assets.xcassets */; };
+		D8CCF30A287C32E600EF9EC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8CCF308287C32E600EF9EC1 /* LaunchScreen.storyboard */; };
+		D8CCF315287C32E600EF9EC1 /* JPMCPlanetsChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CCF314287C32E600EF9EC1 /* JPMCPlanetsChallengeTests.swift */; };
+		D8CCF31F287C32E600EF9EC1 /* JPMCPlanetsChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CCF31E287C32E600EF9EC1 /* JPMCPlanetsChallengeUITests.swift */; };
+		D8CCF321287C32E600EF9EC1 /* JPMCPlanetsChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CCF320287C32E600EF9EC1 /* JPMCPlanetsChallengeUITestsLaunchTests.swift */; };
+		D8CCF331287C33FB00EF9EC1 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CCF32E287C33FB00EF9EC1 /* Dynamic.swift */; };
+		D8CCF332287C33FB00EF9EC1 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CCF32F287C33FB00EF9EC1 /* Utility.swift */; };
+		D8CCF333287C33FB00EF9EC1 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CCF330287C33FB00EF9EC1 /* AppConstants.swift */; };
+		D8CCF348287C365800EF9EC1 /* PlanetsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CCF347287C365800EF9EC1 /* PlanetsListViewController.swift */; };
+		D8CCF34B287C388000EF9EC1 /* PlanetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8CCF349287C388000EF9EC1 /* PlanetTableViewCell.xib */; };
+		D8CCF34C287C388000EF9EC1 /* PlanetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CCF34A287C388000EF9EC1 /* PlanetTableViewCell.swift */; };
+		D8CCF34E287C3AF600EF9EC1 /* PlanetTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CCF34D287C3AF600EF9EC1 /* PlanetTableViewCellViewModel.swift */; };
+		D8CCF350287C3B6D00EF9EC1 /* PlanetsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CCF34F287C3B6D00EF9EC1 /* PlanetsListViewModel.swift */; };
+		D8CCF352287C3C8400EF9EC1 /* PlanetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CCF351287C3C8400EF9EC1 /* PlanetModel.swift */; };
+		D8CCF354287C44F300EF9EC1 /* PlanetsListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CCF353287C44F300EF9EC1 /* PlanetsListService.swift */; };
+		D8DAD536287DBFE400CC3433 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DAD535287DBFE400CC3433 /* DatabaseService.swift */; };
+		D8DAD538287DC43300CC3433 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DAD537287DC43300CC3433 /* CoreDataStack.swift */; };
+		D8DAD53B287DE98800CC3433 /* Planets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DAD539287DE98800CC3433 /* Planets.swift */; };
+		D8DAD53C287DE98800CC3433 /* JPResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DAD53A287DE98800CC3433 /* JPResults.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D8CCF311287C32E600EF9EC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8CCF2F2287C32E400EF9EC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8CCF2F9287C32E400EF9EC1;
+			remoteInfo = JPMCPlanetsChallenge;
+		};
+		D8CCF31B287C32E600EF9EC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8CCF2F2287C32E400EF9EC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8CCF2F9287C32E400EF9EC1;
+			remoteInfo = JPMCPlanetsChallenge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D8298263287E6B0C00FB56BD /* JPPlanets.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JPPlanets.xcdatamodel; sourceTree = "<group>"; };
+		D8CCF2FA287C32E400EF9EC1 /* JPMCPlanetsChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JPMCPlanetsChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8CCF2FD287C32E400EF9EC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D8CCF2FF287C32E400EF9EC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D8CCF304287C32E400EF9EC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D8CCF306287C32E600EF9EC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D8CCF309287C32E600EF9EC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D8CCF30B287C32E600EF9EC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8CCF310287C32E600EF9EC1 /* JPMCPlanetsChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JPMCPlanetsChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8CCF314287C32E600EF9EC1 /* JPMCPlanetsChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPMCPlanetsChallengeTests.swift; sourceTree = "<group>"; };
+		D8CCF31A287C32E600EF9EC1 /* JPMCPlanetsChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JPMCPlanetsChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8CCF31E287C32E600EF9EC1 /* JPMCPlanetsChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPMCPlanetsChallengeUITests.swift; sourceTree = "<group>"; };
+		D8CCF320287C32E600EF9EC1 /* JPMCPlanetsChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPMCPlanetsChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D8CCF32E287C33FB00EF9EC1 /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		D8CCF32F287C33FB00EF9EC1 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		D8CCF330287C33FB00EF9EC1 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		D8CCF347287C365800EF9EC1 /* PlanetsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsListViewController.swift; sourceTree = "<group>"; };
+		D8CCF349287C388000EF9EC1 /* PlanetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlanetTableViewCell.xib; sourceTree = "<group>"; };
+		D8CCF34A287C388000EF9EC1 /* PlanetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetTableViewCell.swift; sourceTree = "<group>"; };
+		D8CCF34D287C3AF600EF9EC1 /* PlanetTableViewCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		D8CCF34F287C3B6D00EF9EC1 /* PlanetsListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetsListViewModel.swift; sourceTree = "<group>"; };
+		D8CCF351287C3C8400EF9EC1 /* PlanetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetModel.swift; sourceTree = "<group>"; };
+		D8CCF353287C44F300EF9EC1 /* PlanetsListService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetsListService.swift; sourceTree = "<group>"; };
+		D8DAD535287DBFE400CC3433 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		D8DAD537287DC43300CC3433 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		D8DAD539287DE98800CC3433 /* Planets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Planets.swift; sourceTree = "<group>"; };
+		D8DAD53A287DE98800CC3433 /* JPResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPResults.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D8CCF2F7287C32E400EF9EC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8CCF30D287C32E600EF9EC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8CCF317287C32E600EF9EC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D8CCF2F1287C32E400EF9EC1 = {
+			isa = PBXGroup;
+			children = (
+				D8CCF2FC287C32E400EF9EC1 /* JPMCPlanetsChallenge */,
+				D8CCF313287C32E600EF9EC1 /* JPMCPlanetsChallengeTests */,
+				D8CCF31D287C32E600EF9EC1 /* JPMCPlanetsChallengeUITests */,
+				D8CCF2FB287C32E400EF9EC1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D8CCF2FB287C32E400EF9EC1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8CCF2FA287C32E400EF9EC1 /* JPMCPlanetsChallenge.app */,
+				D8CCF310287C32E600EF9EC1 /* JPMCPlanetsChallengeTests.xctest */,
+				D8CCF31A287C32E600EF9EC1 /* JPMCPlanetsChallengeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D8CCF2FC287C32E400EF9EC1 /* JPMCPlanetsChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				D8298262287E6B0C00FB56BD /* JPPlanets.xcdatamodeld */,
+				D8CCF2FD287C32E400EF9EC1 /* AppDelegate.swift */,
+				D8CCF2FF287C32E400EF9EC1 /* SceneDelegate.swift */,
+				D8CCF342287C354600EF9EC1 /* Models */,
+				D8CCF346287C358800EF9EC1 /* View */,
+				D8CCF341287C354600EF9EC1 /* Controllers */,
+				D8CCF340287C354600EF9EC1 /* ViewModels */,
+				D8CCF344287C354600EF9EC1 /* Services */,
+				D8CCF32D287C33FB00EF9EC1 /* Utilities */,
+				D8CCF343287C354600EF9EC1 /* Storyboards */,
+				D8CCF306287C32E600EF9EC1 /* Assets.xcassets */,
+				D8CCF30B287C32E600EF9EC1 /* Info.plist */,
+			);
+			path = JPMCPlanetsChallenge;
+			sourceTree = "<group>";
+		};
+		D8CCF313287C32E600EF9EC1 /* JPMCPlanetsChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				D8CCF314287C32E600EF9EC1 /* JPMCPlanetsChallengeTests.swift */,
+			);
+			path = JPMCPlanetsChallengeTests;
+			sourceTree = "<group>";
+		};
+		D8CCF31D287C32E600EF9EC1 /* JPMCPlanetsChallengeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D8CCF31E287C32E600EF9EC1 /* JPMCPlanetsChallengeUITests.swift */,
+				D8CCF320287C32E600EF9EC1 /* JPMCPlanetsChallengeUITestsLaunchTests.swift */,
+			);
+			path = JPMCPlanetsChallengeUITests;
+			sourceTree = "<group>";
+		};
+		D8CCF32D287C33FB00EF9EC1 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D8DAD537287DC43300CC3433 /* CoreDataStack.swift */,
+				D8CCF32E287C33FB00EF9EC1 /* Dynamic.swift */,
+				D8CCF32F287C33FB00EF9EC1 /* Utility.swift */,
+				D8CCF330287C33FB00EF9EC1 /* AppConstants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		D8CCF340287C354600EF9EC1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D8CCF34F287C3B6D00EF9EC1 /* PlanetsListViewModel.swift */,
+				D8CCF34D287C3AF600EF9EC1 /* PlanetTableViewCellViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D8CCF341287C354600EF9EC1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D8CCF347287C365800EF9EC1 /* PlanetsListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D8CCF342287C354600EF9EC1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D8DAD53A287DE98800CC3433 /* JPResults.swift */,
+				D8DAD539287DE98800CC3433 /* Planets.swift */,
+				D8CCF351287C3C8400EF9EC1 /* PlanetModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D8CCF343287C354600EF9EC1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D8CCF308287C32E600EF9EC1 /* LaunchScreen.storyboard */,
+				D8CCF303287C32E400EF9EC1 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D8CCF344287C354600EF9EC1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D8CCF353287C44F300EF9EC1 /* PlanetsListService.swift */,
+				D8DAD535287DBFE400CC3433 /* DatabaseService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D8CCF346287C358800EF9EC1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D8CCF34A287C388000EF9EC1 /* PlanetTableViewCell.swift */,
+				D8CCF349287C388000EF9EC1 /* PlanetTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D8CCF2F9287C32E400EF9EC1 /* JPMCPlanetsChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8CCF324287C32E600EF9EC1 /* Build configuration list for PBXNativeTarget "JPMCPlanetsChallenge" */;
+			buildPhases = (
+				D8CCF2F6287C32E400EF9EC1 /* Sources */,
+				D8CCF2F7287C32E400EF9EC1 /* Frameworks */,
+				D8CCF2F8287C32E400EF9EC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JPMCPlanetsChallenge;
+			productName = JPMCPlanetsChallenge;
+			productReference = D8CCF2FA287C32E400EF9EC1 /* JPMCPlanetsChallenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D8CCF30F287C32E600EF9EC1 /* JPMCPlanetsChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8CCF327287C32E600EF9EC1 /* Build configuration list for PBXNativeTarget "JPMCPlanetsChallengeTests" */;
+			buildPhases = (
+				D8CCF30C287C32E600EF9EC1 /* Sources */,
+				D8CCF30D287C32E600EF9EC1 /* Frameworks */,
+				D8CCF30E287C32E600EF9EC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D8CCF312287C32E600EF9EC1 /* PBXTargetDependency */,
+			);
+			name = JPMCPlanetsChallengeTests;
+			productName = JPMCPlanetsChallengeTests;
+			productReference = D8CCF310287C32E600EF9EC1 /* JPMCPlanetsChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D8CCF319287C32E600EF9EC1 /* JPMCPlanetsChallengeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8CCF32A287C32E600EF9EC1 /* Build configuration list for PBXNativeTarget "JPMCPlanetsChallengeUITests" */;
+			buildPhases = (
+				D8CCF316287C32E600EF9EC1 /* Sources */,
+				D8CCF317287C32E600EF9EC1 /* Frameworks */,
+				D8CCF318287C32E600EF9EC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D8CCF31C287C32E600EF9EC1 /* PBXTargetDependency */,
+			);
+			name = JPMCPlanetsChallengeUITests;
+			productName = JPMCPlanetsChallengeUITests;
+			productReference = D8CCF31A287C32E600EF9EC1 /* JPMCPlanetsChallengeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D8CCF2F2287C32E400EF9EC1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					D8CCF2F9287C32E400EF9EC1 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					D8CCF30F287C32E600EF9EC1 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = D8CCF2F9287C32E400EF9EC1;
+					};
+					D8CCF319287C32E600EF9EC1 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = D8CCF2F9287C32E400EF9EC1;
+					};
+				};
+			};
+			buildConfigurationList = D8CCF2F5287C32E400EF9EC1 /* Build configuration list for PBXProject "JPMCPlanetsChallenge" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D8CCF2F1287C32E400EF9EC1;
+			productRefGroup = D8CCF2FB287C32E400EF9EC1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D8CCF2F9287C32E400EF9EC1 /* JPMCPlanetsChallenge */,
+				D8CCF30F287C32E600EF9EC1 /* JPMCPlanetsChallengeTests */,
+				D8CCF319287C32E600EF9EC1 /* JPMCPlanetsChallengeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D8CCF2F8287C32E400EF9EC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8CCF30A287C32E600EF9EC1 /* LaunchScreen.storyboard in Resources */,
+				D8CCF307287C32E600EF9EC1 /* Assets.xcassets in Resources */,
+				D8CCF305287C32E400EF9EC1 /* Main.storyboard in Resources */,
+				D8CCF34B287C388000EF9EC1 /* PlanetTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8CCF30E287C32E600EF9EC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8CCF318287C32E600EF9EC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D8CCF2F6287C32E400EF9EC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8CCF34E287C3AF600EF9EC1 /* PlanetTableViewCellViewModel.swift in Sources */,
+				D8CCF350287C3B6D00EF9EC1 /* PlanetsListViewModel.swift in Sources */,
+				D8CCF332287C33FB00EF9EC1 /* Utility.swift in Sources */,
+				D8CCF333287C33FB00EF9EC1 /* AppConstants.swift in Sources */,
+				D8CCF352287C3C8400EF9EC1 /* PlanetModel.swift in Sources */,
+				D8DAD53C287DE98800CC3433 /* JPResults.swift in Sources */,
+				D8CCF354287C44F300EF9EC1 /* PlanetsListService.swift in Sources */,
+				D8DAD538287DC43300CC3433 /* CoreDataStack.swift in Sources */,
+				D8CCF348287C365800EF9EC1 /* PlanetsListViewController.swift in Sources */,
+				D8CCF331287C33FB00EF9EC1 /* Dynamic.swift in Sources */,
+				D8DAD536287DBFE400CC3433 /* DatabaseService.swift in Sources */,
+				D8DAD53B287DE98800CC3433 /* Planets.swift in Sources */,
+				D8CCF2FE287C32E400EF9EC1 /* AppDelegate.swift in Sources */,
+				D8CCF300287C32E400EF9EC1 /* SceneDelegate.swift in Sources */,
+				D8CCF34C287C388000EF9EC1 /* PlanetTableViewCell.swift in Sources */,
+				D8298264287E6B0C00FB56BD /* JPPlanets.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8CCF30C287C32E600EF9EC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8CCF315287C32E600EF9EC1 /* JPMCPlanetsChallengeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8CCF316287C32E600EF9EC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8CCF321287C32E600EF9EC1 /* JPMCPlanetsChallengeUITestsLaunchTests.swift in Sources */,
+				D8CCF31F287C32E600EF9EC1 /* JPMCPlanetsChallengeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D8CCF312287C32E600EF9EC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D8CCF2F9287C32E400EF9EC1 /* JPMCPlanetsChallenge */;
+			targetProxy = D8CCF311287C32E600EF9EC1 /* PBXContainerItemProxy */;
+		};
+		D8CCF31C287C32E600EF9EC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D8CCF2F9287C32E400EF9EC1 /* JPMCPlanetsChallenge */;
+			targetProxy = D8CCF31B287C32E600EF9EC1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D8CCF303287C32E400EF9EC1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8CCF304287C32E400EF9EC1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D8CCF308287C32E600EF9EC1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8CCF309287C32E600EF9EC1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D8CCF322287C32E600EF9EC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D8CCF323287C32E600EF9EC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D8CCF325287C32E600EF9EC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JPMCPlanetsChallenge/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.purnachandra.JPMCPlanetsChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D8CCF326287C32E600EF9EC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JPMCPlanetsChallenge/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.purnachandra.JPMCPlanetsChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D8CCF328287C32E600EF9EC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.purnachandra.JPMCPlanetsChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JPMCPlanetsChallenge.app/JPMCPlanetsChallenge";
+			};
+			name = Debug;
+		};
+		D8CCF329287C32E600EF9EC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.purnachandra.JPMCPlanetsChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JPMCPlanetsChallenge.app/JPMCPlanetsChallenge";
+			};
+			name = Release;
+		};
+		D8CCF32B287C32E600EF9EC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.purnachandra.JPMCPlanetsChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JPMCPlanetsChallenge;
+			};
+			name = Debug;
+		};
+		D8CCF32C287C32E600EF9EC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.purnachandra.JPMCPlanetsChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JPMCPlanetsChallenge;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D8CCF2F5287C32E400EF9EC1 /* Build configuration list for PBXProject "JPMCPlanetsChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8CCF322287C32E600EF9EC1 /* Debug */,
+				D8CCF323287C32E600EF9EC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8CCF324287C32E600EF9EC1 /* Build configuration list for PBXNativeTarget "JPMCPlanetsChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8CCF325287C32E600EF9EC1 /* Debug */,
+				D8CCF326287C32E600EF9EC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8CCF327287C32E600EF9EC1 /* Build configuration list for PBXNativeTarget "JPMCPlanetsChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8CCF328287C32E600EF9EC1 /* Debug */,
+				D8CCF329287C32E600EF9EC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8CCF32A287C32E600EF9EC1 /* Build configuration list for PBXNativeTarget "JPMCPlanetsChallengeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8CCF32B287C32E600EF9EC1 /* Debug */,
+				D8CCF32C287C32E600EF9EC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D8298262287E6B0C00FB56BD /* JPPlanets.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D8298263287E6B0C00FB56BD /* JPPlanets.xcdatamodel */,
+			);
+			currentVersion = D8298263287E6B0C00FB56BD /* JPPlanets.xcdatamodel */;
+			path = JPPlanets.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D8CCF2F2287C32E400EF9EC1 /* Project object */;
+}
