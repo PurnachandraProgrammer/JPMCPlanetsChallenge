@@ -1,8 +1,8 @@
 //
 //  CoreDataStack.swift
-//  JPPlanets
+//  JPMCPlanetsChallenge
 //
-//  Created by Sanjay Chauhan on 03/05/2021.
+//  Created by purnachandra rao obulasetty on 11/07/2022.
 //
 
 import Foundation
