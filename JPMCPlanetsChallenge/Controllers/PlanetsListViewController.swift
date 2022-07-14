@@ -10,7 +10,7 @@ import UIKit
 /// This project uses MVVM architecutre pattern.
 /// The MVVM has Model, View and View Model.
 
-/// This class shows the list of tracks by using tableview and shows the error alert in case of error.
+/// This class shows the list of planets by using tableview and shows the error alert in case of error.
 class PlanetsListViewController: UIViewController {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -29,7 +29,7 @@ class PlanetsListViewController: UIViewController {
         }
     }
     
-    /// The TrackViewModel is View model of TracksListViewController
+    /// The PlanetsListViewModel is View model of PlanetsListViewController
     private let planetViewModel = PlanetsListViewModel(planetsListService: PlanetsApiListService(),coreDataService:PlanetDataService())
     
     override func viewDidLoad() {
@@ -98,9 +98,9 @@ extension PlanetsListViewController : UITableViewDelegate,UITableViewDataSource 
         return planetViewModel.getNumberOfPlanets()
     }
     
-    /// 1. Create TrackTableViewCell
-    /// 2. Get the cell view model and assign it to TrackTableViewCell property
-    /// 3. Configure table view cell UI with the help of TrackViewCellModel
+    /// 1. Create PlanetTableViewCell
+    /// 2. Get the cell view model and assign it to PlanetTableViewCell property
+    /// 3. Configure table view cell UI with the help of PlanetTableViewCell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let tableViewCell = self.planetsListTableView.dequeueReusableCell(withIdentifier: "PlanetTableViewCell") as! PlanetTableViewCell
@@ -111,14 +111,14 @@ extension PlanetsListViewController : UITableViewDelegate,UITableViewDataSource 
     
     
     /// This delegate is to handle tableview row selection
-    /// 1. Create the TrackDetailsViewController
-    /// 2. Create TrackDetailViewModel  object by passing track object.
-    /// 3. Configure table view cell UI with the help of TrackViewCellModel
+    /// 1. Create the PlanetsDetailsViewController
+    /// 2. Create PlanetDetailViewModel  object by passing track object.
+    /// 3. Configure table view cell UI with the help of PlanetViewCellModel
     /*
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
      
-     let detailViewController = self.storyboard?.instantiateViewController(withIdentifier: "TrackDetailsViewController") as! TrackDetailsViewController
-     detailViewController.trackDetailViewModel = TrackDetailViewModel(selectedTrackObject: trackViewModel.tracksArray.value[indexPath.row])
+     let detailViewController = self.storyboard?.instantiateViewController(withIdentifier: "PlanetsDetailsViewController") as! PlanetDetailsViewController
+     detailViewController.planetDetailViewModel = PlanetDetailViewModel(selectedPlanetObject: planetViewModel.planetsArray.value[indexPath.row])
      self.navigationController?.pushViewController(detailViewController, animated: true)
      tableView.deselectRow(at: indexPath, animated: true)
      

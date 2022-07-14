@@ -10,10 +10,6 @@ import Foundation
 
 extension CDPlanet {
     func convertToPlanet() -> Planet {
-        
         return Planet(name: self.planetName ?? "")
-        /*
-        return Planet(climate: "", created: "", diameter: "", edited: "", films: [], gravity: "", name: self.planetName ?? "", orbital_period: "", population: "", residents: [], rotation_period: "", surface_water: "", terrain: "", url: "")
-        */
     }
 }

@@ -15,12 +15,12 @@ class PlanetTableViewCell: UITableViewCell {
     func configure() {
         
         // Check the nil value of resultModel
-        guard let trackCellModel = planetTableViewCellModel else {
+        guard let planetCellModel = planetTableViewCellModel else {
             return
         }
         
         // Assign values from result Model
-        planetName?.text = trackCellModel.planetName
+        planetName?.text = planetCellModel.planetName
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
