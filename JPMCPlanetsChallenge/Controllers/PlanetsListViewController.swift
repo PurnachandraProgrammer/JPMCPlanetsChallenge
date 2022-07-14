@@ -49,16 +49,21 @@ class PlanetsListViewController: UIViewController {
     private func initBindingAndFetchPlanets() {
         
         /// Observe the planetsArray changes and load tableview
-        self.planetViewModel.planetsArray.bind { _ in
+        self.planetViewModel.planetsArray.bind { planets in
             
             /// Observe the planetsArray changes and reload the tableview to show the planets list
             /// Stop loading indicator after  planetsArray changes are observed.
-            DispatchQueue.main.async {
-                self.planetsListTableView.reloadData()
-                self.activityIndicator.stopAnimating()
-                self.activityIndicator.isHidden = true
+            
+            if planets.count > 0 {
+                
+                DispatchQueue.main.async {
+                    self.planetsListTableView.reloadData()
+                    self.activityIndicator.stopAnimating()
+                    self.activityIndicator.isHidden = true
+                }
+                return
+
             }
-            return
         }
         
         /// Observe the apiFetchError and show alert with the error
@@ -81,6 +86,7 @@ class PlanetsListViewController: UIViewController {
         }
         
         /// Showing the loading indicator before calling fetchPlanets. Stop This indicator  after planets fetching completed or in case of error.
+        
         self.activityIndicator.isHidden = false
         self.activityIndicator.startAnimating()
         
