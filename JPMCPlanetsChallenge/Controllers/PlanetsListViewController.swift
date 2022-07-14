@@ -54,23 +54,19 @@ class PlanetsListViewController: UIViewController {
             /// Observe the planetsArray changes and reload the tableview to show the planets list
             /// Stop loading indicator after  planetsArray changes are observed.
             
-            if planets.count > 0 {
-                
-                DispatchQueue.main.async {
-                    self.planetsListTableView.reloadData()
-                    self.activityIndicator.stopAnimating()
-                    self.activityIndicator.isHidden = true
-                }
-                return
-
+            DispatchQueue.main.async {
+                self.planetsListTableView.reloadData()
+                self.activityIndicator.stopAnimating()
+                self.activityIndicator.isHidden = true
             }
+            return
         }
         
         /// Observe the apiFetchError and show alert with the error
         self.planetViewModel.apiFetchError.bind { error in
             /// Show error alert in case error occured.
             if let error = error {
-
+                
                 let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
                 let alertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
                 alert.addAction(alertAction)
@@ -81,14 +77,19 @@ class PlanetsListViewController: UIViewController {
                     self.activityIndicator.isHidden = true
                     self.present(alert, animated: true, completion: nil)
                 }
-
+                
             }
         }
         
         /// Showing the loading indicator before calling fetchPlanets. Stop This indicator  after planets fetching completed or in case of error.
         
-        self.activityIndicator.isHidden = false
-        self.activityIndicator.startAnimating()
+        
+        DispatchQueue.main.async {
+            
+            self.activityIndicator.isHidden = false
+            self.activityIndicator.startAnimating()
+            
+        }
         
         /// Call the fetchPlanets function to fetch the planets
         planetViewModel.fetchPlanets()
