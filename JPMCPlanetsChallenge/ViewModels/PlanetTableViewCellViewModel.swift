@@ -5,7 +5,7 @@
 import Foundation
 import UIKit
 
-/// This class is view model for TrackTableViewCell and responsible for providing data and responsible for download image from the server.
+/// This class is view model for PlanetTableViewCell and responsible for providing data and responsible for download image from the server.
 public class PlanetTableViewCellViewModel {
     
     let planetName: String

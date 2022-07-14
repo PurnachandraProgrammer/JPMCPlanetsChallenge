@@ -1,7 +1,5 @@
 //
 //  ResultListModelTest.swift
-//  AppleTrackTestTests
-//
 //  Created by purnachandra rao obulasetty on 28/11/2021.
 //
 

@@ -23,7 +23,7 @@ class PlanetsListViewController: UIViewController {
             planetsListTableView.dataSource = self
             planetsListTableView.tableFooterView = .init()
             
-            /// Register TrackTableViewCell  nib to use in the tableview. By creating separate nib file, it can be re-used.
+            /// Register PlanetTableViewCell  nib to use in the tableview. By creating separate nib file, it can be re-used.
             let cellNib = UINib(nibName: "PlanetTableViewCell", bundle: .main)
             planetsListTableView.register(cellNib, forCellReuseIdentifier: "PlanetTableViewCell")
         }
@@ -42,54 +42,49 @@ class PlanetsListViewController: UIViewController {
         self.title = AppConstants.rootViewControllerTitle
     }
     
-    /// Initialise the binding and fetching tracks from the server
+    /// Initialise the binding and fetching planets from the server
     ///
-    /// Binding initialisation and calls to fetch the tracks from server with help of TrackViewModel
+    /// Binding initialisation and calls to fetch the planets from server with help of PlanetsListViewModel
     ///
     private func initBindingAndFetchPlanets() {
         
-        /// Observe the tracksArray changes and load tableview
+        /// Observe the planetsArray changes and load tableview
         self.planetViewModel.planetsArray.bind { _ in
             
-            /// Observe the tracksArray changes and reload the tableview to show the tracks list
-            /// Stop loading indicator after  tracksArray changes are observed.
+            /// Observe the planetsArray changes and reload the tableview to show the planets list
+            /// Stop loading indicator after  planetsArray changes are observed.
             DispatchQueue.main.async {
                 self.planetsListTableView.reloadData()
                 self.activityIndicator.stopAnimating()
                 self.activityIndicator.isHidden = true
             }
+            return
         }
         
         /// Observe the apiFetchError and show alert with the error
         self.planetViewModel.apiFetchError.bind { error in
-            
-            var apiError = error
             /// Show error alert in case error occured.
-            if apiError == nil {
-                apiError = NSError(domain: "planets list API fetch error", code: 0, userInfo: nil)
-            }
-            
-            let alert = UIAlertController(title: "Error", message: apiError?.localizedDescription, preferredStyle: .alert)
-            let alertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
-            alert.addAction(alertAction)
-            
-            DispatchQueue.main.async {
+            if let error = error {
+
+                let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                let alertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+                alert.addAction(alertAction)
                 
-                self.activityIndicator.stopAnimating()
-                self.activityIndicator.isHidden = true
-                self.present(alert, animated: true, completion: nil)
+                DispatchQueue.main.async {
+                    
+                    self.activityIndicator.stopAnimating()
+                    self.activityIndicator.isHidden = true
+                    self.present(alert, animated: true, completion: nil)
+                }
+
             }
-            return
-            
         }
         
-        
-        /// Showing the loading indicator before calling fetchTracks. Stop This indicator  after tracks fetching completed or in case of error.
-        
+        /// Showing the loading indicator before calling fetchPlanets. Stop This indicator  after planets fetching completed or in case of error.
         self.activityIndicator.isHidden = false
         self.activityIndicator.startAnimating()
         
-        /// Call the fetchTracks function to fetch the tracks
+        /// Call the fetchPlanets function to fetch the planets
         planetViewModel.fetchPlanets()
         
     }
@@ -120,7 +115,7 @@ extension PlanetsListViewController : UITableViewDelegate,UITableViewDataSource 
     
     /// This delegate is to handle tableview row selection
     /// 1. Create the PlanetsDetailsViewController
-    /// 2. Create PlanetDetailViewModel  object by passing track object.
+    /// 2. Create PlanetDetailViewModel  object by passing planet object.
     /// 3. Configure table view cell UI with the help of PlanetViewCellModel
     /*
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

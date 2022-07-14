@@ -1,6 +1,6 @@
 //
-//  TrackViewModelTest.swift
-//  ScottishPowerTestTests
+//  JPMCPlanetsChallengeTests.swift
+//  JPMCPlanetsChallenge
 //
 //  Created by purnachandra rao obulasetty on 28/11/2021.
 //
@@ -23,7 +23,7 @@ class PlanetsListViewModelTest: XCTestCase {
         super.tearDown()
     }
 
-    func testFetchTracks() {
+    func testFetchPlanets() {
         
         let expectation = XCTestExpectation(description: "planets fetch")
         

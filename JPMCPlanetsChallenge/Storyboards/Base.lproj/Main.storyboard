@@ -12,7 +12,7 @@
         <!--Planets List View Controller-->
         <scene sceneID="yXA-u0-Cnr">
             <objects>
-                <viewController storyboardIdentifier="TrackViewController" id="Dsp-Uu-du7" customClass="PlanetsListViewController" customModule="JPMCPlanetsChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlanetsListViewController" id="Dsp-Uu-du7" customClass="PlanetsListViewController" customModule="JPMCPlanetsChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gM8-Gt-8LV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

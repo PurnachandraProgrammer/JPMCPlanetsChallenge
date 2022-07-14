@@ -36,7 +36,7 @@ public class PlanetsListViewModel {
                 
                 self.planetsListService.getPlanetRecords { planetRecords in
                     
-                    if(planetRecords != nil && planetRecords?.count != 0){
+                    if(planetRecords != nil && planetRecords!.count > 0){
 
                         _ = self.planetsCoredataService.insertPlanetRecords(records: planetRecords!)
                         completionHandler(planetRecords,nil)
@@ -53,7 +53,7 @@ public class PlanetsListViewModel {
         })
     }
     
-    /// Fetch tracks from the server and sort by release date.
+    /// Fetch planets from the server and sort by release date.
     func fetchPlanets() {
         
         self.fetchPlanets { results, error in
@@ -70,7 +70,7 @@ public class PlanetsListViewModel {
         }
     }
     
-    /// Returns the numer of tracks
+    /// Returns the numer of planets
     func getNumberOfPlanets() -> Int {
         return planetCellViewModels.count
     }
