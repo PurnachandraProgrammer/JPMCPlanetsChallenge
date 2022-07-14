@@ -30,7 +30,7 @@ class PlanetsListViewController: UIViewController {
     }
     
     /// The TrackViewModel is View model of TracksListViewController
-    private let planetViewModel = PlanetsListViewModel(planetsListService: PlanetsListService())
+    private let planetViewModel = PlanetsListViewModel(planetsListService: PlanetsApiListService(),coreDataService:PlanetDataService())
     
     override func viewDidLoad() {
         super.viewDidLoad()

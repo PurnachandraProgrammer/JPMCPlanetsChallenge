@@ -1,9 +1,6 @@
-//
-//  TrackViewModel.swift
-//  AppleTrackTest
-//
-//  Created by purnachandra rao obulasetty on 26/11/2021.
-//
+//  PlanetsListViewModel.swift
+//  JPMCPlanetsChallenge
+//  Created by purnachandra rao obulasetty on 11/07/2022.
 
 import Foundation
 
@@ -13,44 +10,60 @@ public class PlanetsListViewModel {
     var planetsArray: Dynamic<[Planet]> = Dynamic([])
     var apiFetchError:Dynamic<Error?> = Dynamic(nil)
     
-    private var planetsListService:PlanetsListServiceProtocol?
+    private var planetsListService:PlanetBaseService!
+    private var planetsCoredataService:PlanetCoreDataService!
     
     private var planetCellViewModels  = [PlanetTableViewCellViewModel]()
     //private var trackDetailViewModels = [TrackDetailViewModel]()
     
-    init(planetsListService:PlanetsListServiceProtocol?) {
+    init(planetsListService:PlanetBaseService?,coreDataService:PlanetCoreDataService) {
         self.planetsListService = planetsListService
+        self.planetsCoredataService = coreDataService
     }
     
     /// Fetch tracks from the server using TracksListServiceProtocol
-    func fetchPlanets(completionHandler: @escaping (PlanetResults?,Error?) -> Void) {
+    func fetchPlanets(completionHandler: @escaping (Array<Planet>?,Error?) -> Void) {
         
-        if let planetsListService = planetsListService {
+        
+        planetsCoredataService.getPlanetRecords(completionHandler: { result in
             
-            planetsListService.fetchPlanets() { resultObject, error in
-                print("The object is \(String(describing: resultObject))")
-                completionHandler(resultObject,error)
+            if result != nil && result!.count > 0 {
+                completionHandler(result,nil)
             }
-        }
-        
+            
+            else {
+                
+                self.planetsListService.getPlanetRecords { planetRecords in
+                    
+                    if(planetRecords != nil && planetRecords?.count != 0){
+
+                        _ = self.planetsCoredataService.batchInsertPlanetRecords(records: planetRecords!)
+                        completionHandler(planetRecords,nil)
+
+                    }
+
+                    
+                }
+
+            }
+            
+        })
+        /*
         else {
             completionHandler(nil,NSError(domain:"Planets list service is empty", code: 0, userInfo: nil))
             return
-        }
+        }*/
     }
     
     /// Fetch tracks from the server and sort by release date.
     func fetchPlanets() {
         
-        self.fetchPlanets { resultObject, error in
+        self.fetchPlanets { results, error in
             
-            if let resultListModel = resultObject {
+            if results != nil {
                 
-                if let results = resultListModel.results {
-                    self.processCellModels(results: results)
-                    self.planetsArray.value = results
-                }
-                
+                self.processCellModels(results: results!)
+                self.planetsArray.value = results!
             }
             else {
                 self.apiFetchError.value = error

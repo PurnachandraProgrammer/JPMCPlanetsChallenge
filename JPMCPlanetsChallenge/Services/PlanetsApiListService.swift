@@ -1,26 +1,26 @@
 //
-//  TracksListService.swift
-//  AppleTrackTest
+//  PlanetsApiListService.swift
+//  JPMCPlanetsChallenge
 //
-//  Created by purnachandra rao obulasetty on 29/11/2021.
+//  Created by purnachandra rao obulasetty on 11/07/2022.
 //
+
 
 import Foundation
 
-protocol PlanetsListServiceProtocol {
+final class PlanetsApiListService : PlanetApiResourceService {
     
-    func fetchPlanets(completionHandler: @escaping (PlanetResults?,Error?) -> Void) -> Void;
-    
-}
-
-final class PlanetsListService : PlanetsListServiceProtocol {
-    
-    let endpoint = "https://swapi.dev/api/planets/"
     var task : URLSessionTask?
     
+    func getPlanetRecords(completionHandler: @escaping (Array<Planet>?) -> Void) {
+        
+        self.fetchPlanets { planetResults, error in
+            completionHandler(planetResults?.results)
+        }
+    }
+    
     func fetchPlanets(completionHandler: @escaping (PlanetResults?, Error?) -> Void) -> Void {
-        let url = URL(string: endpoint)
-        self.getTask(with: url!, completionHandler: completionHandler)
+        self.getTask(with: ApiResource.planetsResource, completionHandler: completionHandler)
     }
     
     fileprivate func getTask<T: Codable>(with url: URL, completionHandler: @escaping (T?, Error?) -> Void) -> Void {

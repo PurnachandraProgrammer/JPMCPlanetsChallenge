@@ -1,12 +1,17 @@
 //
 //  AppConstants.swift
-//  AppleTrackTest
+//  JPMCPlanetsChallenge
 //
-//  Created by purnachandra rao obulasetty on 23/11/2021.
+//  Created by purnachandra rao obulasetty on 11/07/2022.
 //
+
 
 import Foundation
 
 struct AppConstants {
     static let rootViewControllerTitle = "Planets"
+}
+
+struct ApiResource {
+    static let planetsResource : URL = URL(string: "https://swapi.dev/api/planets/")!
 }

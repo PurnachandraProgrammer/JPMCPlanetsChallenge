@@ -1,9 +1,6 @@
-//
-//  TrackTableViewCellViewModel.swift
-//  AppleTrackTest
-//
-//  Created by purnachandra rao obulasetty on 28/11/2021.
-//
+//  PlanetTableViewCellViewModel.swift
+//  JPMCPlanetsChallenge
+//  Created by purnachandra rao obulasetty on 11/07/2022.
 
 import Foundation
 import UIKit
