@@ -20,10 +20,7 @@ class PlanetModelTest: XCTestCase {
     
     func testModel () {
         
-        let planet = Planet(name:"testPlanet")
-        
-        
-        
+        //let planet = Planet(name:"testPlanet")
     }
 
     func testExample() throws {
