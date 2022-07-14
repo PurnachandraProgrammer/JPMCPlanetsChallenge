@@ -5,6 +5,8 @@ import Foundation
 import CoreData
 
 extension CDPlanet {
+    
+    // create fetch request
     @nonobjc public class func fetchRequest() -> NSFetchRequest<CDPlanet> {
         return NSFetchRequest<CDPlanet>(entityName: "CDPlanet")
     }
