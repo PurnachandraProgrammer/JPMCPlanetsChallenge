@@ -63,23 +63,31 @@ class PlanetsListViewController: UIViewController {
         /// Observe the apiFetchError and show alert with the error
         self.planetViewModel.apiFetchError.bind { error in
             
+            var apiError = error
             /// Show error alert in case error occured.
-            if let error = error {
-                
-                let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
-                let alertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
-                alert.addAction(alertAction)
-                self.present(alert, animated: true, completion: nil)
-                return
+            if apiError == nil {
+                apiError = NSError(domain: "planets list API fetch error", code: 0, userInfo: nil)
             }
+            
+            let alert = UIAlertController(title: "Error", message: apiError?.localizedDescription, preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+            alert.addAction(alertAction)
+            
+            DispatchQueue.main.async {
+                
+                self.activityIndicator.stopAnimating()
+                self.activityIndicator.isHidden = true
+                self.present(alert, animated: true, completion: nil)
+            }
+            return
             
         }
         
+        
         /// Showing the loading indicator before calling fetchTracks. Stop This indicator  after tracks fetching completed or in case of error.
-        DispatchQueue.main.async {
-            self.activityIndicator.isHidden = false
-            self.activityIndicator.startAnimating()
-        }
+        
+        self.activityIndicator.isHidden = false
+        self.activityIndicator.startAnimating()
         
         /// Call the fetchTracks function to fetch the tracks
         planetViewModel.fetchPlanets()

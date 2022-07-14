@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="okY-k3-VMZ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -20,9 +21,8 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Edo-zf-97R">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Edo-zf-97R">
                                 <rect key="frame" x="204" y="453" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="color" systemColor="systemRedColor"/>
                             </activityIndicatorView>
                         </subviews>
@@ -30,7 +30,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="igd-eM-N52" firstAttribute="trailing" secondItem="sHn-ZH-XXj" secondAttribute="trailing" id="Bke-Un-ECD"/>
+                            <constraint firstItem="Edo-zf-97R" firstAttribute="centerY" secondItem="igd-eM-N52" secondAttribute="centerY" id="JXo-xk-LGU"/>
                             <constraint firstItem="igd-eM-N52" firstAttribute="top" secondItem="sHn-ZH-XXj" secondAttribute="top" id="QwC-Cz-Lin"/>
+                            <constraint firstItem="Edo-zf-97R" firstAttribute="centerX" secondItem="igd-eM-N52" secondAttribute="centerX" id="XRa-2Y-usF"/>
                             <constraint firstItem="sHn-ZH-XXj" firstAttribute="bottom" secondItem="igd-eM-N52" secondAttribute="bottom" id="ava-nt-6GU"/>
                             <constraint firstItem="sHn-ZH-XXj" firstAttribute="leading" secondItem="igd-eM-N52" secondAttribute="leading" id="orX-y4-Ilg"/>
                         </constraints>

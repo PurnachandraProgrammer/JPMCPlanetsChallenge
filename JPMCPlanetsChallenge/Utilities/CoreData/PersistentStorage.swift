@@ -18,7 +18,7 @@ final class PersistentStorage
     // MARK: - Core Data stack
     lazy var persistentContainer: NSPersistentContainer = {
 
-        let container = NSPersistentContainer(name: "JPPlanets")
+        let container = NSPersistentContainer(name: "Planets")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")

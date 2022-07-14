@@ -8,10 +8,12 @@
 
 import Foundation
 
+// This class is used to fetch the planets from the server as of now.
 final class PlanetsApiListService : PlanetApiResourceService {
     
     var task : URLSessionTask?
     
+    // Get the planets from the server
     func getPlanetRecords(completionHandler: @escaping (Array<Planet>?) -> Void) {
         
         self.fetchPlanets { planetResults, error in
@@ -23,6 +25,8 @@ final class PlanetsApiListService : PlanetApiResourceService {
         self.getTask(with: ApiResource.planetsResource, completionHandler: completionHandler)
     }
     
+
+    // This method is used to perform
     fileprivate func getTask<T: Codable>(with url: URL, completionHandler: @escaping (T?, Error?) -> Void) -> Void {
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in

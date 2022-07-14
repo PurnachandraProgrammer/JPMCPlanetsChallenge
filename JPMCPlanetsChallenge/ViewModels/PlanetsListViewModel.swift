@@ -14,45 +14,43 @@ public class PlanetsListViewModel {
     private var planetsCoredataService:PlanetCoreDataService!
     
     private var planetCellViewModels  = [PlanetTableViewCellViewModel]()
-    //private var trackDetailViewModels = [TrackDetailViewModel]()
     
     init(planetsListService:PlanetBaseService?,coreDataService:PlanetCoreDataService) {
         self.planetsListService = planetsListService
         self.planetsCoredataService = coreDataService
     }
     
-    /// Fetch tracks from the server using TracksListServiceProtocol
+    /// Fetch planets from the server using PlanetBaseService protocol
     func fetchPlanets(completionHandler: @escaping (Array<Planet>?,Error?) -> Void) {
-        
-        
+
+        // Fetch planets from the core data
         planetsCoredataService.getPlanetRecords(completionHandler: { result in
             
+            // If records are not empty return to the controller
             if result != nil && result!.count > 0 {
                 completionHandler(result,nil)
             }
             
+            //If no records are available in core data, fetch from the server
             else {
                 
                 self.planetsListService.getPlanetRecords { planetRecords in
                     
                     if(planetRecords != nil && planetRecords?.count != 0){
 
-                        _ = self.planetsCoredataService.batchInsertPlanetRecords(records: planetRecords!)
+                        _ = self.planetsCoredataService.insertPlanetRecords(records: planetRecords!)
                         completionHandler(planetRecords,nil)
-
                     }
-
                     
+                    else {
+                        completionHandler(nil,NSError(domain:"Planets list service is empty", code: 0, userInfo: nil))
+                        return
+                    }
                 }
 
             }
             
         })
-        /*
-        else {
-            completionHandler(nil,NSError(domain:"Planets list service is empty", code: 0, userInfo: nil))
-            return
-        }*/
     }
     
     /// Fetch tracks from the server and sort by release date.

@@ -11,6 +11,7 @@ import CoreData
 
 final class PlanetDataService : PlanetCoreDataService {
 
+    /*
     func batchInsertPlanetRecords(records: Array<Planet>) -> Bool {
 
         PersistentStorage.shared.printDocumentDirectoryPath()
@@ -28,34 +29,40 @@ final class PlanetDataService : PlanetCoreDataService {
 
         return true
 
-    }
+    }*/
 
+    /*
     private func createBatchInsertRequest(records:Array<Planet>) -> NSBatchInsertRequest {
 
         let totalCount = records.count
         var index = 0
 
-        let batchInsert = NSBatchInsertRequest(entity: CDPlanet.entity()) { (managedObject: NSManagedObject) -> Bool in
-
-            guard index < totalCount else {return true}
-
-            if let planet = managedObject as? CDPlanet {
-                let data = records[index]
-                planet.id = UUID()
-                planet.planetName = data.name
+        if #available(iOS 14.0, *) {
+            
+            let batchInsert = NSBatchInsertRequest(entity: CDPlanet.entity()) { (managedObject: NSManagedObject) -> Bool in
+                
+                guard index < totalCount else {return true}
+                
+                if let planet = managedObject as? CDPlanet {
+                    let data = records[index]
+                    planet.id = UUID()
+                    planet.planetName = data.name
+                }
+                
+                index  += 1
+                return false
             }
-
-            index  += 1
-            return false
+            
+            return batchInsert
+        } else {
+            // Fallback on earlier versions
+            
         }
-
-        return batchInsert
-
-    }
+    }*/
 
     func insertPlanetRecords(records: Array<Planet>) -> Bool {
 
-        debugPrint("AnimalDataRepository: Insert record operation is starting")
+        debugPrint("PlanetDataService: Insert record operation is starting")
 
         PersistentStorage.shared.persistentContainer.performBackgroundTask { privateManagedContext in
             //insert code
@@ -67,7 +74,8 @@ final class PlanetDataService : PlanetCoreDataService {
 
             if(privateManagedContext.hasChanges){
                 try? privateManagedContext.save()
-                debugPrint("AnimalDataRepository: Insert record operation is completed")
+                debugPrint("PlanetDataService: Insert record operation is completed")
+
             }
         }
 

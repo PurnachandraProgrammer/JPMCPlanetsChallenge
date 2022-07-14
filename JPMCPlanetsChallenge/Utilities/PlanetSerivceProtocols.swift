@@ -13,7 +13,6 @@ protocol PlanetBaseService {
 
 protocol PlanetCoreDataService : PlanetBaseService {
     func insertPlanetRecords(records:Array<Planet>) -> Bool
-    func batchInsertPlanetRecords(records:Array<Planet>) -> Bool
 }
 
 protocol PlanetApiResourceService : PlanetBaseService {

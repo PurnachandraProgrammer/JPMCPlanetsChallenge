@@ -23,7 +23,7 @@ class PlanetsCoreDataServiceTest: XCTestCase {
     
     func testResultModelPlanetName() throws {
         
-        _ = coreDataService.batchInsertPlanetRecords(records: resultListModel.results!)
+        _ = coreDataService.insertPlanetRecords(records: resultListModel.results!)
         
         coreDataService.getPlanetRecords { planets in
             
