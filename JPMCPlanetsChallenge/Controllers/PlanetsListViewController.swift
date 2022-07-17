@@ -1,10 +1,3 @@
-//
-//  PlanetsListViewController.swift
-//  JPMCPlanetsChallenge
-//
-//  Created by purnachandra rao obulasetty on 11/07/2022.
-//
-
 import UIKit
 
 /// This project uses MVVM architecutre pattern.

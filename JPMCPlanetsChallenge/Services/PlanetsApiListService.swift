@@ -1,11 +1,3 @@
-//
-//  PlanetsApiListService.swift
-//  JPMCPlanetsChallenge
-//
-//  Created by purnachandra rao obulasetty on 11/07/2022.
-//
-
-
 import Foundation
 
 // This class is used to fetch the planets from the server as of now.

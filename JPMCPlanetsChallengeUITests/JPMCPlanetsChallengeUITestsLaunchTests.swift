@@ -1,10 +1,3 @@
-//
-//  JPMCPlanetsChallengeUITestsLaunchTests.swift
-//  JPMCPlanetsChallengeUITests
-//
-//  Created by purnachandra rao obulasetty on 11/07/2022.
-//
-
 import XCTest
 
 class JPMCPlanetsChallengeUITestsLaunchTests: XCTestCase {

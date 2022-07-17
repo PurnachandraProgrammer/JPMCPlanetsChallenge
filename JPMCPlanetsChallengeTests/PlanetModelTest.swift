@@ -1,10 +1,3 @@
-//
-//  PlanetModelTest.swift
-//  JPMCPlanetsChallengeTests
-//
-//  Created by purnachandra rao obulasetty on 14/07/2022.
-//
-
 import XCTest
 import JPMCPlanetsChallenge
 

@@ -1,7 +1,3 @@
-//  PlanetsListViewModel.swift
-//  JPMCPlanetsChallenge
-//  Created by purnachandra rao obulasetty on 11/07/2022.
-
 import Foundation
 
 /// This class is main view model of this applicaiton.

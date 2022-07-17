@@ -1,10 +1,3 @@
-//
-//  ResultListModelTest.swift
-//  JPMCPlanetsChallengeTests
-//
-//  Created by purnachandra rao obulasetty on 28/11/2021.
-//
-
 import XCTest
 @testable import JPMCPlanetsChallenge
 
