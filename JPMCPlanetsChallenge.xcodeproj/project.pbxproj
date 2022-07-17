@@ -21,7 +21,7 @@
 		D8A39A5C288486EB0071E61F /* PlanetsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A39A5B288486EB0071E61F /* PlanetsListViewController.swift */; };
 		D8A39A60288487380071E61F /* PlanetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A39A5E288487380071E61F /* PlanetTableViewCell.swift */; };
 		D8A39A61288487380071E61F /* PlanetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8A39A5F288487380071E61F /* PlanetTableViewCell.xib */; };
-		D8A39A702884882B0071E61F /* PersistentStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A39A6F2884882A0071E61F /* PersistentStorage.swift */; };
+		D8A39A702884882B0071E61F /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A39A6F2884882A0071E61F /* CoreDataHelper.swift */; };
 		D8A39A78288488550071E61F /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A39A72288488550071E61F /* Dynamic.swift */; };
 		D8A39A7A288488550071E61F /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A39A75288488550071E61F /* Utility.swift */; };
 		D8A39A7B288488550071E61F /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A39A76288488550071E61F /* AppConstants.swift */; };
@@ -71,7 +71,7 @@
 		D8A39A5B288486EB0071E61F /* PlanetsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsListViewController.swift; sourceTree = "<group>"; };
 		D8A39A5E288487380071E61F /* PlanetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetTableViewCell.swift; sourceTree = "<group>"; };
 		D8A39A5F288487380071E61F /* PlanetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlanetTableViewCell.xib; sourceTree = "<group>"; };
-		D8A39A6F2884882A0071E61F /* PersistentStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentStorage.swift; sourceTree = "<group>"; };
+		D8A39A6F2884882A0071E61F /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		D8A39A72288488550071E61F /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		D8A39A75288488550071E61F /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		D8A39A76288488550071E61F /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
@@ -156,7 +156,7 @@
 		D8A39A6E2884882A0071E61F /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				D8A39A6F2884882A0071E61F /* PersistentStorage.swift */,
+				D8A39A6F2884882A0071E61F /* CoreDataHelper.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -420,7 +420,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8A39A702884882B0071E61F /* PersistentStorage.swift in Sources */,
+				D8A39A702884882B0071E61F /* CoreDataHelper.swift in Sources */,
 				D8A39A7B288488550071E61F /* AppConstants.swift in Sources */,
 				D8A39A8E288488BC0071E61F /* AppDelegate.swift in Sources */,
 				D8A39A7C288488550071E61F /* PlanetSerivceProtocols.swift in Sources */,

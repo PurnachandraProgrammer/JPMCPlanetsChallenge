@@ -15,7 +15,7 @@ final class PlanetDataService : PlanetCoreDataService {
 
         debugPrint("PlanetDataService: Insert record operation is starting")
 
-        PersistentStorage.shared.persistentContainer.performBackgroundTask { privateManagedContext in
+        CoreDataHelper.shared.persistentContainer.performBackgroundTask { privateManagedContext in
             
             //insert code
             records.forEach { planetRecord in
@@ -37,7 +37,7 @@ final class PlanetDataService : PlanetCoreDataService {
 
     func getPlanetRecords(completionHandler: @escaping (Array<Planet>?) -> Void) {
 
-        let result = PersistentStorage.shared.fetchManagedObject(managedObject: CDPlanet.self)
+        let result = CoreDataHelper.shared.fetchManagedObject(managedObject: CDPlanet.self)
             var planets : Array<Planet> = []
             result?.forEach({ (cdPlanet) in
                 planets.append(cdPlanet.convertToPlanet())

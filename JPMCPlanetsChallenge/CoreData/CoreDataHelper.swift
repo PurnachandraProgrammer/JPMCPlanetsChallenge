@@ -2,11 +2,11 @@ import Foundation
 
 import CoreData
 
-final class PersistentStorage
+final class CoreDataHelper
 {
 
     private init(){}
-    static let shared = PersistentStorage()
+    static let shared = CoreDataHelper()
 
     // MARK: - Core Data stack
     lazy var persistentContainer: NSPersistentContainer = {
@@ -37,7 +37,7 @@ final class PersistentStorage
     func fetchManagedObject<T: NSManagedObject>(managedObject: T.Type) -> [T]?
     {
         do {
-            guard let result = try PersistentStorage.shared.context.fetch(managedObject.fetchRequest()) as? [T] else {return nil
+            guard let result = try CoreDataHelper.shared.context.fetch(managedObject.fetchRequest()) as? [T] else {return nil
 
             }
 
