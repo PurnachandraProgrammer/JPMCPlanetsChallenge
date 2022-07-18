@@ -33,7 +33,7 @@ class PlanetsListViewModelTest: XCTestCase {
         }
         planetViewModel.fetchPlanets(completionHandler: { planets, error in
             
-            if planets != nil && planets!.count > 0 {
+            if planets != nil && planets!.count == 3 {
                 expectation.fulfill()
             }
             else {
