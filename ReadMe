@@ -6,7 +6,8 @@ Features Implemented:
     - Dependency injection
     - MVVM pattern
     - Multi-threading
-    - Unit test for Network, ViewModel and ViewController classes
+    - Offline storage
+    - Unit test for Network, Core data, ViewModel and ViewController classes
     - Sample UI Test for PlanetsListViewController
     - Demonstration of xib use
     - App can support from iOS 13.0
