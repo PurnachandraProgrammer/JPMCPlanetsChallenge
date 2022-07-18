@@ -44,6 +44,18 @@ class PlanetsListViewControllerTest: XCTestCase {
       
     }
     
+    func test_HomeViewController_WhenMusicDataAvailable_ShouldUpdateTheMusicCellProperties() throws {
+        
+        // Arrange
+        let testDetails = PlanetTableViewCellViewModel(planetName: "Test")
+        // Act
+        cell.planetTableViewCellModel = testDetails
+        cell.configure()
+        
+        // Assert
+            XCTAssertEqual(cell.planetName.text, "Test")
+    }
+    
     func test_HomeViewController_WhenMusicCellCreated_ShouldCreateProperties() {
         // Arrange
             
@@ -61,17 +73,6 @@ class PlanetsListViewControllerTest: XCTestCase {
     
     
     
-    func test_HomeViewController_WhenMusicDataAvailable_ShouldUpdateTheMusicCellProperties() throws {
-        
-        // Arrange
-        let testDetails = PlanetTableViewCellViewModel(planetName: "Test")
-        // Act
-        cell.planetTableViewCellModel = testDetails
-        cell.configure()
-        
-        // Assert
-            XCTAssertEqual(cell.planetName.text, "Test")
-    }
     
 
 }

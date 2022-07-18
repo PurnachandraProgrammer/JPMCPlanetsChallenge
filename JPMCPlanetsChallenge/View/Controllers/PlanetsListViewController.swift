@@ -34,6 +34,7 @@ class PlanetsListViewController: UIViewController {
     
     private func initTitle() {
         self.title = AppConstants.rootViewControllerTitle
+        navigationController?.navigationBar.tintColor = AppConstants.orangeColor
     }
     
     /// Initialise the binding and fetching planets from the server
