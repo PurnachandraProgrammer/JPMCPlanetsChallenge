@@ -11,20 +11,21 @@ import CoreData
 
 final class PlanetDataService : PlanetCoreDataService {
     
-    // Insert the records in core data
+    // This method is used Insert the records in core data
     func insertPlanetRecords(records: Array<Planet>) -> Bool {
         
         debugPrint("PlanetDataService: Insert record operation is starting")
         
         CoreDataHelper.shared.persistentContainer.performBackgroundTask { privateManagedContext in
             
-            //insert code
+            //Create CDPanet with private context
             records.forEach { planetRecord in
                 let cdPlanet = CDPlanet(context: privateManagedContext)
                 cdPlanet.id = UUID()
                 cdPlanet.planetName = planetRecord.name
             }
             
+            // save the changes.
             if(privateManagedContext.hasChanges){
                 try? privateManagedContext.save()
                 debugPrint("PlanetDataService: Insert record operation is completed")
