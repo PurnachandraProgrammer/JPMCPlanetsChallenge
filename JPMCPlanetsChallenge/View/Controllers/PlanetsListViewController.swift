@@ -74,18 +74,13 @@ class PlanetsListViewController: UIViewController {
         }
         
         /// Showing the loading indicator before calling fetchPlanets. Stop This indicator  after planets fetching completed or in case of error.
-        
-        
         DispatchQueue.main.async {
-            
             self.activityIndicator.isHidden = false
             self.activityIndicator.startAnimating()
-            
         }
         
         /// Call the fetchPlanets function to fetch the planets
         planetViewModel.fetchPlanets()
-        
     }
 }
 
@@ -96,6 +91,7 @@ extension PlanetsListViewController : UITableViewDelegate,UITableViewDataSource 
         return 1
     }
     
+    // Get the number of planets by using view model.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return planetViewModel.getNumberOfPlanets()
     }
@@ -111,20 +107,5 @@ extension PlanetsListViewController : UITableViewDelegate,UITableViewDataSource 
         tableViewCell.configure()
         return tableViewCell
     }
-    
-    
-    /// This delegate is to handle tableview row selection
-    /// 1. Create the PlanetsDetailsViewController
-    /// 2. Create PlanetDetailViewModel  object by passing planet object.
-    /// 3. Configure table view cell UI with the help of PlanetViewCellModel
-    /*
-     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-     
-     let detailViewController = self.storyboard?.instantiateViewController(withIdentifier: "PlanetsDetailsViewController") as! PlanetDetailsViewController
-     detailViewController.planetDetailViewModel = PlanetDetailViewModel(selectedPlanetObject: planetViewModel.planetsArray.value[indexPath.row])
-     self.navigationController?.pushViewController(detailViewController, animated: true)
-     tableView.deselectRow(at: indexPath, animated: true)
-     
-     }*/
 }
 

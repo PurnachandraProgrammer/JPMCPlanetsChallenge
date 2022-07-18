@@ -6,7 +6,7 @@ public class PlanetTableViewCellViewModel {
     
     let planetName: String
     
-    /// Initialize the view model with the parametrs.
+    /// Initialize the view model with the planetName parameter.
     init(planetName:String) {
         self.planetName = planetName
     }

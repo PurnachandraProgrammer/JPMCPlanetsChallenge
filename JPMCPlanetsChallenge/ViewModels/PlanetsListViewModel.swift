@@ -23,7 +23,8 @@ public class PlanetsListViewModel {
         // Fetch planets from the core data
         planetsCoredataService.getPlanetRecords(completionHandler: { result in
             
-            // If records are not empty return to the controller
+            // If records are available, no need to fetch the planets from the server.
+            // Inform to controller with planets.
             if result != nil && result!.count > 0 {
                 completionHandler(result,nil)
             }
@@ -31,22 +32,27 @@ public class PlanetsListViewModel {
             //If no records are available in core data, fetch from the server
             else {
                 
+                // Check if network is reachabe.
                 if self.reachability.isConnectedToNetwork() {
                     
+                    // Get the planets from the server.
                     self.planetsListService.getPlanetRecords { planetRecords in
                         
                         if(planetRecords != nil && planetRecords!.count > 0){
                             
+                            // Insert the planets in the core data
                             _ = self.planetsCoredataService.insertPlanetRecords(records: planetRecords!)
                             completionHandler(planetRecords,nil)
                         }
                         
                         else {
+                            // If list is empty, inform to the controlelr with error message.
                             completionHandler(nil,NSError(domain:"Planets list service is empty", code: 0, userInfo: nil))
                             return
                         }
                     }
                 }
+                // If network is not reachable, inform to controller with error message.
                 else {
                     completionHandler(nil,NSError(domain:"Network is not available. Please connect to network", code: 0, userInfo: nil))
                     return
@@ -56,7 +62,7 @@ public class PlanetsListViewModel {
         })
     }
     
-    /// Fetch planets from the server and sort by release date.
+    /// Fetch planets from the server.
     func fetchPlanets() {
         
         self.fetchPlanets { results, error in
@@ -84,10 +90,7 @@ public class PlanetsListViewModel {
     }
     
     func createCellViewModel( resultModel: Planet ) -> PlanetTableViewCellViewModel {
-        
         return PlanetTableViewCellViewModel(planetName: resultModel.name)
-        
-        
     }
     
     private func processCellModels( results: [Planet] ) {
