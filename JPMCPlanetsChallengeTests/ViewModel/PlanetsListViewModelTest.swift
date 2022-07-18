@@ -21,13 +21,6 @@ class PlanetsListViewModelTest: XCTestCase {
         
         let expectation = XCTestExpectation(description: "planets fetch")
         
-        planetViewModel.apiFetchError.bind { error in
-            
-            if error != nil {
-                XCTAssert(false, "ViewModel should not be able to fetch without service")
-            }
-        }
-        
         planetViewModel.planetsArray.bind { _ in
             expectation.fulfill()
         }
