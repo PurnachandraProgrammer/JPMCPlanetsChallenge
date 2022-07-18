@@ -28,9 +28,9 @@ final class PlanetDataService : PlanetCoreDataService {
             
             // save the changes.
             if(privateManagedContext.hasChanges){
-                
                 do {
                     try privateManagedContext.save()
+                    completionHandler(nil)
                 }
                 catch {
                     completionHandler(error)

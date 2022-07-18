@@ -11,13 +11,21 @@ class PlanetsListViewControllerTest: XCTestCase {
     
     override func setUpWithError() throws {
         
+        // Create story board
         storyboard = UIStoryboard(name: "Main", bundle: nil)
+        // Instantiate PlanetsListViewController
         sut = storyboard.instantiateViewController(withIdentifier: "PlanetsListViewController") as? PlanetsListViewController
         sut.loadViewIfNeeded()
         
         cellID = "PlanetTableViewCell"
+        
+        // Create nib file
         let cellNib = UINib(nibName: "PlanetTableViewCell", bundle: .main)
+        
+        // Register nib with the tableview
         sut.planetsListTableView.register(cellNib, forCellReuseIdentifier: "PlanetTableViewCell")
+        
+        // Create cell
         cell = sut.planetsListTableView.dequeueReusableCell(withIdentifier: "PlanetTableViewCell") as? PlanetTableViewCell
     }
 
@@ -29,7 +37,9 @@ class PlanetsListViewControllerTest: XCTestCase {
     }
 
     func test_HomeViewController_WhenCreated_HasTableViewProperty() throws {
-        let tableView = try XCTUnwrap(sut.planetsListTableView, "TableView is not connected to IBOutlet") // This will Unwrap the optional value and we can add meaningful error
+        let tableView = try XCTUnwrap(sut.planetsListTableView, "TableView is not connected to IBOutlet")
+        
+        // Check if tableView is created
         XCTAssertNotNil(tableView, "TableView is not created")
     }
     
@@ -43,17 +53,22 @@ class PlanetsListViewControllerTest: XCTestCase {
     
     func test_HomeViewController_WhenMusicDataAvailable_ShouldUpdateTheMusicCellProperties() throws {
         
+        // Create TableViewCellViewModel
         let testDetails = PlanetTableViewCellViewModel(planetName: "Test")
         cell.planetTableViewCellModel = testDetails
         cell.configure()
+        
+        // Compare planetName label text with "Test"
         XCTAssertEqual(cell.planetName.text, "Test")
     }
     
     func test_HomeViewController_WhenMusicCellCreated_ShouldCreateProperties() {
+        // Check the not nil value of planetName
         XCTAssertNotNil(cell.planetName)
     }
     
     func test_HomeViewController_WhenCreated_ShouldBindToTheViewModel() {
+        // Check the not nil value of planetViewModel
         XCTAssertNotNil(sut.planetViewModel)
     }
     

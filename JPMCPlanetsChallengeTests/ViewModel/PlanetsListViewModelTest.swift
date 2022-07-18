@@ -9,6 +9,8 @@ class PlanetsListViewModelTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
+        
+        // Create View model with the help mock API service and PlanetDataService
         self.planetViewModel = PlanetsListViewModel(planetsListService: MockPlanetsListService(), coreDataService: PlanetDataService())
     }
     
@@ -21,11 +23,14 @@ class PlanetsListViewModelTest: XCTestCase {
         
         let expectation = XCTestExpectation(description: "planets fetch")
         
+        // Fetch planets using View Model.
         planetViewModel.fetchPlanets(completionHandler: { planets, error in
             
+            // If planets count greather than zero, it is success
             if planets != nil && planets!.count > 0 {
                 expectation.fulfill()
             }
+            // Failure in case of empty list
             else {
                 XCTAssert(false, "planets count should be greater than zero")
             }
@@ -34,6 +39,7 @@ class PlanetsListViewModelTest: XCTestCase {
     }
 }
 
+// Mock API service, to get the planets from JSON.
 fileprivate class MockPlanetsListService : PlanetBaseService {
     
     func getPlanetRecords(completionHandler: @escaping (Array<Planet>?) -> Void) {
