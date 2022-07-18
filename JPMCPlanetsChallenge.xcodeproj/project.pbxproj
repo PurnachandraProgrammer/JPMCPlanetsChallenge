@@ -14,7 +14,6 @@
 		D8298290287F3C5C00FB56BD /* PlanetResultModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D829828F287F3C5C00FB56BD /* PlanetResultModelTest.swift */; };
 		D8298295287FBB9700FB56BD /* Planets.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8298292287FBB9700FB56BD /* Planets.xcdatamodeld */; };
 		D8298298287FBC0200FB56BD /* CDPlanetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8298297287FBC0200FB56BD /* CDPlanetExtension.swift */; };
-		D86483C228807DAC0012BDA0 /* PlanetModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86483C128807DAC0012BDA0 /* PlanetModelTest.swift */; };
 		D8A39A542884865B0071E61F /* ReadMe in Resources */ = {isa = PBXBuildFile; fileRef = D8A39A532884865B0071E61F /* ReadMe */; };
 		D8A39A5C288486EB0071E61F /* PlanetsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A39A5B288486EB0071E61F /* PlanetsListViewController.swift */; };
 		D8A39A60288487380071E61F /* PlanetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A39A5E288487380071E61F /* PlanetTableViewCell.swift */; };
@@ -66,7 +65,6 @@
 		D829828F287F3C5C00FB56BD /* PlanetResultModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetResultModelTest.swift; sourceTree = "<group>"; };
 		D8298293287FBB9700FB56BD /* Planets.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Planets.xcdatamodel; sourceTree = "<group>"; };
 		D8298297287FBC0200FB56BD /* CDPlanetExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDPlanetExtension.swift; sourceTree = "<group>"; };
-		D86483C128807DAC0012BDA0 /* PlanetModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetModelTest.swift; sourceTree = "<group>"; };
 		D8A39A532884865B0071E61F /* ReadMe */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe; sourceTree = "<group>"; };
 		D8A39A5B288486EB0071E61F /* PlanetsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsListViewController.swift; sourceTree = "<group>"; };
 		D8A39A5E288487380071E61F /* PlanetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetTableViewCell.swift; sourceTree = "<group>"; };
@@ -265,7 +263,6 @@
 				D8A39A8F2884BF3F0071E61F /* JSON Responses */,
 				D829828F287F3C5C00FB56BD /* PlanetResultModelTest.swift */,
 				D8298283287F339200FB56BD /* PlanetsCoreDataServiceTest.swift */,
-				D86483C128807DAC0012BDA0 /* PlanetModelTest.swift */,
 			);
 			path = JPMCPlanetsChallengeTests;
 			sourceTree = "<group>";
@@ -487,7 +484,6 @@
 				D8A39A98288529FC0071E61F /* PlanetsListViewModelTest.swift in Sources */,
 				D8298290287F3C5C00FB56BD /* PlanetResultModelTest.swift in Sources */,
 				D8A39A952884C1460071E61F /* PlanetsListViewControllerTest.swift in Sources */,
-				D86483C228807DAC0012BDA0 /* PlanetModelTest.swift in Sources */,
 				D8298284287F339200FB56BD /* PlanetsCoreDataServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
