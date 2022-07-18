@@ -6,7 +6,6 @@ Features Implemented:
     - Dependency injection
     - MVVM pattern
     - Multi-threading
-    - Practiced TDD approach for one complete unit (Home screen)
     - Unit test for Network, ViewModel and ViewController classes
     - Sample UI Test for PlanetsListViewController
     - Demonstration of xib use
