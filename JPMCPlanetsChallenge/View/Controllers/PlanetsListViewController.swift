@@ -63,6 +63,7 @@ class PlanetsListViewController: UIViewController {
                 let alertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
                 alert.addAction(alertAction)
                 
+                // Show the error in the main queue
                 DispatchQueue.main.async {
                     
                     self.activityIndicator.stopAnimating()
@@ -73,7 +74,7 @@ class PlanetsListViewController: UIViewController {
             }
         }
         
-        /// Showing the loading indicator before calling fetchPlanets. Stop This indicator  after planets fetching completed or in case of error.
+        /// Showing the loading indicator before calling fetchPlanets. Stop This indicator after planets fetching completed or in case of error.
         DispatchQueue.main.async {
             self.activityIndicator.isHidden = false
             self.activityIndicator.startAnimating()
@@ -86,10 +87,6 @@ class PlanetsListViewController: UIViewController {
 
 /// UITableViewDelegate and UITableViewDataSource methods implementation
 extension PlanetsListViewController : UITableViewDelegate,UITableViewDataSource {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
     
     // Get the number of planets by using view model.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
