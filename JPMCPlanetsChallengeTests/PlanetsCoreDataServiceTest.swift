@@ -20,7 +20,16 @@ class PlanetsCoreDataServiceTest: XCTestCase {
         
         coreDataService.getPlanetRecords { planets in
             
-            if planets != nil && planets!.count > 0 {
+            if planets != nil && planets!.count == 3 {
+                
+                let firstObject = planets![0]
+                let secondObject = planets![1]
+                let thirdObject = planets![2]
+                
+                XCTAssertEqual(firstObject.name, "Tatooine","first record name is not equal to Tatooine")
+                XCTAssertEqual(secondObject.name, "Alderaan","first record name is not equal to Alderaan")
+                XCTAssertEqual(thirdObject.name, "Yavin IV","third record name is not equal to Yavin IV")
+
             }
             else {
                 XCTFail()
