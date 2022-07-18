@@ -15,6 +15,7 @@ class PlanetsListViewController: UIViewController {
             planetsListTableView.delegate = self
             planetsListTableView.dataSource = self
             planetsListTableView.tableFooterView = .init()
+            planetsListTableView.accessibilityIdentifier = "PlanetsVCTableViewAccessID" // For UI Test
             
             /// Register PlanetTableViewCell  nib to use in the tableview. By creating separate nib file, it can be re-used.
             let cellNib = UINib(nibName: "PlanetTableViewCell", bundle: .main)
@@ -108,6 +109,7 @@ extension PlanetsListViewController : UITableViewDelegate,UITableViewDataSource 
         
         let tableViewCell = self.planetsListTableView.dequeueReusableCell(withIdentifier: "PlanetTableViewCell") as! PlanetTableViewCell
         tableViewCell.planetTableViewCellModel = planetViewModel.getCellViewModel(at: indexPath)
+        tableViewCell.accessibilityIdentifier = "PlanetCellAccessID_\(indexPath.row)" // For UI Test
         tableViewCell.configure()
         return tableViewCell
     }

@@ -3,7 +3,7 @@ import UIKit
 class PlanetTableViewCell: UITableViewCell {
     
     @IBOutlet weak var planetName: UILabel!
-    var planetTableViewCellModel : PlanetTableViewCellViewModel?
+    public var planetTableViewCellModel : PlanetTableViewCellViewModel?
     
     override func awakeFromNib() {
         super.awakeFromNib()
