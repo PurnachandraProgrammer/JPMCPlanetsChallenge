@@ -10,11 +10,11 @@ import CoreData
 
 
 final class PlanetDataService : PlanetCoreDataService {
-
+    
     func insertPlanetRecords(records: Array<Planet>) -> Bool {
-
+        
         debugPrint("PlanetDataService: Insert record operation is starting")
-
+        
         CoreDataHelper.shared.persistentContainer.performBackgroundTask { privateManagedContext in
             
             //insert code
@@ -23,27 +23,49 @@ final class PlanetDataService : PlanetCoreDataService {
                 cdPlanet.id = UUID()
                 cdPlanet.planetName = planetRecord.name
             }
-
+            
             if(privateManagedContext.hasChanges){
                 try? privateManagedContext.save()
                 debugPrint("PlanetDataService: Insert record operation is completed")
-
+                
             }
         }
-
+        
         return true
     }
-
-
-    func getPlanetRecords(completionHandler: @escaping (Array<Planet>?) -> Void) {
-
+    
+    
+    func deletePlanetRecords() {
+        
+        debugPrint("PlanetDataService: Insert record operation is starting")
+        
         let result = CoreDataHelper.shared.fetchManagedObject(managedObject: CDPlanet.self)
-            var planets : Array<Planet> = []
-            result?.forEach({ (cdPlanet) in
-                planets.append(cdPlanet.convertToPlanet())
-            })
-
-            completionHandler(planets)
-
+        
+        CoreDataHelper.shared.persistentContainer.performBackgroundTask { privateManagedContext in
+            
+            //insert code
+            result?.forEach { cdPlanet in
+                privateManagedContext.delete(cdPlanet)
+            }
+            
+            if(privateManagedContext.hasChanges){
+                try? privateManagedContext.save()
+                debugPrint("PlanetDataService: Insert record operation is completed")
+                
+            }
+        }
+        
+    }
+    
+    func getPlanetRecords(completionHandler: @escaping (Array<Planet>?) -> Void) {
+        
+        let result = CoreDataHelper.shared.fetchManagedObject(managedObject: CDPlanet.self)
+        var planets : Array<Planet> = []
+        result?.forEach({ (cdPlanet) in
+            planets.append(cdPlanet.convertToPlanet())
+        })
+        
+        completionHandler(planets)
+        
     }
 }

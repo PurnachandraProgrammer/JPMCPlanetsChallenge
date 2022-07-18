@@ -29,6 +29,7 @@
 		D8A39A912884BF3F0071E61F /* Planets.json in Resources */ = {isa = PBXBuildFile; fileRef = D8A39A902884BF3F0071E61F /* Planets.json */; };
 		D8A39A952884C1460071E61F /* PlanetsListViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A39A942884C1460071E61F /* PlanetsListViewControllerTest.swift */; };
 		D8A39A98288529FC0071E61F /* PlanetsListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A39A97288529FC0071E61F /* PlanetsListViewModelTest.swift */; };
+		D8A39A9A288538970071E61F /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A39A99288538970071E61F /* Reachability.swift */; };
 		D8CCF305287C32E400EF9EC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8CCF303287C32E400EF9EC1 /* Main.storyboard */; };
 		D8CCF307287C32E600EF9EC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8CCF306287C32E600EF9EC1 /* Assets.xcassets */; };
 		D8CCF30A287C32E600EF9EC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8CCF308287C32E600EF9EC1 /* LaunchScreen.storyboard */; };
@@ -80,6 +81,7 @@
 		D8A39A902884BF3F0071E61F /* Planets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Planets.json; sourceTree = "<group>"; };
 		D8A39A942884C1460071E61F /* PlanetsListViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetsListViewControllerTest.swift; sourceTree = "<group>"; };
 		D8A39A97288529FC0071E61F /* PlanetsListViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetsListViewModelTest.swift; sourceTree = "<group>"; };
+		D8A39A99288538970071E61F /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		D8CCF2FA287C32E400EF9EC1 /* JPMCPlanetsChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JPMCPlanetsChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8CCF304287C32E400EF9EC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D8CCF306287C32E600EF9EC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 		D8A39A71288488550071E61F /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				D8A39A99288538970071E61F /* Reachability.swift */,
 				D8A39A72288488550071E61F /* Dynamic.swift */,
 				D8A39A75288488550071E61F /* Utility.swift */,
 				D8A39A76288488550071E61F /* AppConstants.swift */,
@@ -457,6 +460,7 @@
 			files = (
 				D8A39A702884882B0071E61F /* CoreDataHelper.swift in Sources */,
 				D8A39A7B288488550071E61F /* AppConstants.swift in Sources */,
+				D8A39A9A288538970071E61F /* Reachability.swift in Sources */,
 				D8A39A8E288488BC0071E61F /* AppDelegate.swift in Sources */,
 				D8A39A7C288488550071E61F /* PlanetSerivceProtocols.swift in Sources */,
 				D8CCF34E287C3AF600EF9EC1 /* PlanetTableViewCellViewModel.swift in Sources */,
@@ -660,6 +664,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -688,6 +693,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

@@ -7,8 +7,10 @@ class PlanetResultModelTest: XCTestCase {
     var resultListModel: PlanetResults!
     
     override func setUp() {
-        let path = Bundle.main.path(forResource: "Planets", ofType: "json")!
-        let data = try! Data(contentsOf: URL(fileURLWithPath: path))
+        
+        guard let filePath = Bundle(for: PlanetsListViewModelTest.self).url(forResource: "Planets", withExtension: "json"),let data = try? Data(contentsOf: filePath) else {
+            return
+        }
         let decoder = JSONDecoder()
         resultListModel = try! decoder.decode(PlanetResults.self, from: data)
     }

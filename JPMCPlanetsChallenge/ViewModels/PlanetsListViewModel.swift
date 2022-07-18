@@ -5,6 +5,7 @@ public class PlanetsListViewModel {
     
     var planetsArray: Dynamic<[Planet]> = Dynamic([])
     var apiFetchError:Dynamic<Error?> = Dynamic(nil)
+    let reachability: Reachability = Reachability()
     
     private var planetsListService:PlanetBaseService!
     private var planetsCoredataService:PlanetCoreDataService!
@@ -18,7 +19,7 @@ public class PlanetsListViewModel {
     
     /// Fetch planets from the server using PlanetBaseService protocol
     func fetchPlanets(completionHandler: @escaping (Array<Planet>?,Error?) -> Void) {
-
+        
         // Fetch planets from the core data
         planetsCoredataService.getPlanetRecords(completionHandler: { result in
             
@@ -30,20 +31,26 @@ public class PlanetsListViewModel {
             //If no records are available in core data, fetch from the server
             else {
                 
-                self.planetsListService.getPlanetRecords { planetRecords in
+                if self.reachability.isConnectedToNetwork() {
                     
-                    if(planetRecords != nil && planetRecords!.count > 0){
-
-                        _ = self.planetsCoredataService.insertPlanetRecords(records: planetRecords!)
-                        completionHandler(planetRecords,nil)
-                    }
-                    
-                    else {
-                        completionHandler(nil,NSError(domain:"Planets list service is empty", code: 0, userInfo: nil))
-                        return
+                    self.planetsListService.getPlanetRecords { planetRecords in
+                        
+                        if(planetRecords != nil && planetRecords!.count > 0){
+                            
+                            _ = self.planetsCoredataService.insertPlanetRecords(records: planetRecords!)
+                            completionHandler(planetRecords,nil)
+                        }
+                        
+                        else {
+                            completionHandler(nil,NSError(domain:"Planets list service is empty", code: 0, userInfo: nil))
+                            return
+                        }
                     }
                 }
-
+                else {
+                    completionHandler(nil,NSError(domain:"Network is not available. Please connect to network", code: 0, userInfo: nil))
+                    return
+                }
             }
             
         })

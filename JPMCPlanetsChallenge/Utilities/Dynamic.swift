@@ -1,5 +1,6 @@
 import Foundation
 
+// Dynamic class for MVVM pattern.
 final class Dynamic<T> {
     
     typealias Listener = (T) -> Void
