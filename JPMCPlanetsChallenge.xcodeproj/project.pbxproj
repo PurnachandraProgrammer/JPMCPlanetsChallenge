@@ -265,8 +265,8 @@
 		D8CCF313287C32E600EF9EC1 /* JPMCPlanetsChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				D8A39A96288529FC0071E61F /* ViewModel */,
 				D8A39A922884C1460071E61F /* View */,
+				D8A39A96288529FC0071E61F /* ViewModel */,
 				D8A39A8F2884BF3F0071E61F /* JSON Responses */,
 				D829828F287F3C5C00FB56BD /* PlanetResultModelTest.swift */,
 				D8A39A9E288572AD0071E61F /* CoreData */,
