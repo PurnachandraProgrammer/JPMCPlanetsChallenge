@@ -5,7 +5,7 @@ final class PlanetsApiListService : PlanetApiResourceService {
     
     var task : URLSessionTask?
     
-    // Get the planets from the server
+    // This method is used to fetch planets from the server
     func getPlanetRecords(completionHandler: @escaping (Array<Planet>?) -> Void) {
         
         self.fetchPlanets { planetResults, error in
@@ -13,13 +13,13 @@ final class PlanetsApiListService : PlanetApiResourceService {
         }
     }
     
-    func fetchPlanets(completionHandler: @escaping (PlanetResults?, Error?) -> Void) -> Void {
+    private func fetchPlanets(completionHandler: @escaping (PlanetResults?, Error?) -> Void) -> Void {
         self.getTask(with: ApiResource.planetsResource, completionHandler: completionHandler)
     }
     
 
-    // This method is used to perform
-    fileprivate func getTask<T: Codable>(with url: URL, completionHandler: @escaping (T?, Error?) -> Void) -> Void {
+    // This method is used to fetch data with HTTP GET method and convert using JSONDecoder
+    private func getTask<T: Codable>(with url: URL, completionHandler: @escaping (T?, Error?) -> Void) -> Void {
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data, error == nil else {

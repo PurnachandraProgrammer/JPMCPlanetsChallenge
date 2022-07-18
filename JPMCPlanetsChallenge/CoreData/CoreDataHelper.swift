@@ -9,6 +9,7 @@ final class CoreDataHelper
     static let shared = CoreDataHelper()
 
     // MARK: - Core Data stack
+    // Get and set the persistentContainer object
     lazy var persistentContainer: NSPersistentContainer = {
 
         let container = NSPersistentContainer(name: "Planets")
@@ -20,7 +21,9 @@ final class CoreDataHelper
         return container
     }()
 
+    // view context
     lazy var context = persistentContainer.viewContext
+    
     // MARK: - Core Data Saving support
 
     func saveContext() {
@@ -38,9 +41,7 @@ final class CoreDataHelper
     {
         do {
             guard let result = try CoreDataHelper.shared.context.fetch(managedObject.fetchRequest()) as? [T] else {return nil
-
             }
-
             return result
 
         } catch let error {
@@ -50,7 +51,4 @@ final class CoreDataHelper
         return nil
     }
 
-    func printDocumentDirectoryPath() {
-       debugPrint(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0])
-    }
 }

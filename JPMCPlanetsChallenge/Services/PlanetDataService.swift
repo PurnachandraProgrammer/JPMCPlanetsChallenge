@@ -11,6 +11,7 @@ import CoreData
 
 final class PlanetDataService : PlanetCoreDataService {
     
+    // Insert the records in core data
     func insertPlanetRecords(records: Array<Planet>) -> Bool {
         
         debugPrint("PlanetDataService: Insert record operation is starting")
@@ -34,29 +35,7 @@ final class PlanetDataService : PlanetCoreDataService {
         return true
     }
     
-    
-    func deletePlanetRecords() {
-        
-        debugPrint("PlanetDataService: Insert record operation is starting")
-        
-        let result = CoreDataHelper.shared.fetchManagedObject(managedObject: CDPlanet.self)
-        
-        CoreDataHelper.shared.persistentContainer.performBackgroundTask { privateManagedContext in
-            
-            //insert code
-            result?.forEach { cdPlanet in
-                privateManagedContext.delete(cdPlanet)
-            }
-            
-            if(privateManagedContext.hasChanges){
-                try? privateManagedContext.save()
-                debugPrint("PlanetDataService: Insert record operation is completed")
-                
-            }
-        }
-        
-    }
-    
+    // Get records(CDPlanet) from the core data and convert to Planet
     func getPlanetRecords(completionHandler: @escaping (Array<Planet>?) -> Void) {
         
         let result = CoreDataHelper.shared.fetchManagedObject(managedObject: CDPlanet.self)

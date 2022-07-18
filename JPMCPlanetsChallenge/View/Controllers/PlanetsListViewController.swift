@@ -38,9 +38,7 @@ class PlanetsListViewController: UIViewController {
     }
     
     /// Initialise the binding and fetching planets from the server
-    ///
     /// Binding initialisation and calls to fetch the planets from server with help of PlanetsListViewModel
-    ///
     private func initBindingAndFetchPlanets() {
         
         /// Observe the planetsArray changes and load tableview
@@ -48,7 +46,6 @@ class PlanetsListViewController: UIViewController {
             
             /// Observe the planetsArray changes and reload the tableview to show the planets list
             /// Stop loading indicator after  planetsArray changes are observed.
-            
             DispatchQueue.main.async {
                 self.planetsListTableView.reloadData()
                 self.activityIndicator.stopAnimating()
