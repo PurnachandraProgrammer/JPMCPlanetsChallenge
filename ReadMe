@@ -1,5 +1,5 @@
-Author : Manik Mathesh
-Date : Jan 2022
+Author : Purnachandrarao Obulasetty
+Date : July 2022
 
 Features Implemented:
 =====================
@@ -8,17 +8,16 @@ Features Implemented:
     - Multi-threading
     - Practiced TDD approach for one complete unit (Home screen)
     - Unit test for Network, ViewModel and ViewController classes
-    - Sample UI Test for HomeViewController
-    - Created Mock responses
+    - Sample UI Test for PlanetsListViewController
     - Demonstration of xib use
-    - Pull to refresh TableView
     - App can support from iOS 13.0
 
 Improvements:
 ============
     - Paging
+    - Pull to refresh TableView
     - Add Details screen
     
 Note:
 =====
-    - Used apple's ituens apis "https://swapi.dev/api/planets/" and sample response is stored in "Planets.json" file.
+    - Used api "https://swapi.dev/api/planets/" and sample response is stored in "Planets.json" file.
