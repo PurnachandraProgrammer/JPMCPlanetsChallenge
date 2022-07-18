@@ -10,9 +10,10 @@ import CoreData
 
 
 final class PlanetDataService : PlanetCoreDataService {
-    
+
     // This method is used Insert the records in core data
-    func insertPlanetRecords(records: Array<Planet>) -> Bool {
+    
+    func insertPlanetRecords(records:Array<Planet>,completionHandler: @escaping (_ error:Error?) -> Void) {
         
         debugPrint("PlanetDataService: Insert record operation is starting")
         
@@ -27,13 +28,15 @@ final class PlanetDataService : PlanetCoreDataService {
             
             // save the changes.
             if(privateManagedContext.hasChanges){
-                try? privateManagedContext.save()
-                debugPrint("PlanetDataService: Insert record operation is completed")
                 
+                do {
+                    try privateManagedContext.save()
+                }
+                catch {
+                    completionHandler(error)
+                }
             }
         }
-        
-        return true
     }
     
     // Get records(CDPlanet) from the core data and convert to Planet

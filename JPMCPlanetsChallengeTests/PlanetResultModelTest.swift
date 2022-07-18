@@ -12,7 +12,7 @@ class PlanetResultModelTest: XCTestCase {
             return
         }
         let decoder = JSONDecoder()
-        resultListModel = try! decoder.decode(PlanetResults.self, from: data)
+        resultListModel = try? decoder.decode(PlanetResults.self, from: data)
     }
     
     func testModelPlanetName() throws {

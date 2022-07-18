@@ -41,10 +41,10 @@ public class PlanetsListViewModel {
                         if(planetRecords != nil && planetRecords!.count > 0){
                             
                             // Insert the planets in the core data
-                            _ = self.planetsCoredataService.insertPlanetRecords(records: planetRecords!)
-                            completionHandler(planetRecords,nil)
+                            self.planetsCoredataService.insertPlanetRecords(records: planetRecords!) { error in
+                                completionHandler(planetRecords,error)
+                            }
                         }
-                        
                         else {
                             // If list is empty, inform to the controlelr with error message.
                             completionHandler(nil,NSError(domain:"Planets list service is empty", code: 0, userInfo: nil))

@@ -21,12 +21,9 @@ class PlanetsListViewModelTest: XCTestCase {
         
         let expectation = XCTestExpectation(description: "planets fetch")
         
-        planetViewModel.planetsArray.bind { _ in
-            expectation.fulfill()
-        }
         planetViewModel.fetchPlanets(completionHandler: { planets, error in
             
-            if planets != nil && planets!.count == 3 {
+            if planets != nil && planets!.count > 0 {
                 expectation.fulfill()
             }
             else {

@@ -13,31 +13,28 @@ class PlanetsCoreDataServiceTest: XCTestCase {
             return
         }
         let decoder = JSONDecoder()
-        resultListModel = try! decoder.decode(PlanetResults.self, from: data)
+        resultListModel = try? decoder.decode(PlanetResults.self, from: data)
 
     }
     
-    func testResultModelPlanetName() throws {
+    func testResultModelPlanetName() {
         
         let expectation = XCTestExpectation(description: "planets core data fetch")
-        let insertStatus = coreDataService.insertPlanetRecords(records: resultListModel.results!)
-        
-        if insertStatus {
+        coreDataService.insertPlanetRecords(records: resultListModel.results!) { error in
 
-            coreDataService.getPlanetRecords { planets in
+            guard let _ = error else {
+                XCTFail("insert planet records failed")
+                return
+            }
+            self.coreDataService.getPlanetRecords { planets in
                 
                 if planets != nil && planets!.count > 0 {
                     expectation.fulfill()
                 }
                 else {
-                    XCTFail()
                 }
             }
 
-        }
-        
-        else {
-            XCTFail()
         }
     }
 }

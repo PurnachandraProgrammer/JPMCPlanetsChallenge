@@ -7,7 +7,7 @@ protocol PlanetBaseService {
 
 // PlanetCoreDataService protocol for core data
 protocol PlanetCoreDataService : PlanetBaseService {
-    func insertPlanetRecords(records:Array<Planet>) -> Bool
+    func insertPlanetRecords(records:Array<Planet>,completionHandler: @escaping (_ error:Error?) -> Void)
 }
 
 // PlanetApiResourceService protocol for Apiresource

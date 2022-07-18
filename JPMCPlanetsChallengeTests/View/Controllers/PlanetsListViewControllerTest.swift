@@ -10,7 +10,7 @@ class PlanetsListViewControllerTest: XCTestCase {
     var cell: PlanetTableViewCell!
     
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
         storyboard = UIStoryboard(name: "Main", bundle: nil)
         sut = storyboard.instantiateViewController(withIdentifier: "PlanetsListViewController") as? PlanetsListViewController
         sut.loadViewIfNeeded()
@@ -22,7 +22,6 @@ class PlanetsListViewControllerTest: XCTestCase {
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         storyboard = nil
         sut = nil
         cell = nil
@@ -30,10 +29,7 @@ class PlanetsListViewControllerTest: XCTestCase {
     }
 
     func test_HomeViewController_WhenCreated_HasTableViewProperty() throws {
-        // Arrange
-        // Act
         let tableView = try XCTUnwrap(sut.planetsListTableView, "TableView is not connected to IBOutlet") // This will Unwrap the optional value and we can add meaningful error
-        // Assert
         XCTAssertNotNil(tableView, "TableView is not created")
     }
     
@@ -47,18 +43,13 @@ class PlanetsListViewControllerTest: XCTestCase {
     
     func test_HomeViewController_WhenMusicDataAvailable_ShouldUpdateTheMusicCellProperties() throws {
         
-        // Arrange
         let testDetails = PlanetTableViewCellViewModel(planetName: "Test")
-        // Act
         cell.planetTableViewCellModel = testDetails
         cell.configure()
-        
-        // Assert
         XCTAssertEqual(cell.planetName.text, "Test")
     }
     
     func test_HomeViewController_WhenMusicCellCreated_ShouldCreateProperties() {
-        // Assert
         XCTAssertNotNil(cell.planetName)
     }
     
