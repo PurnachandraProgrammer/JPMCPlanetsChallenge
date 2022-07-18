@@ -14,21 +14,21 @@ class JPMCPlanetsChallengeUITests: XCTestCase {
     }
     
     
-    func test_HomeViewController_isTableViewExists() throws {
+    func test_PlanetsListViewController_isTableViewExists() throws {
         
         let tablesQuery = app.tables.matching(identifier: "PlanetsVCTableViewAccessID")
         XCTAssertTrue(tablesQuery.element.exists)
     }
     
     
-    func test_HomeViewController_isDetailNavigationBarExists() throws {
+    func test_PlanetsListViewController_isDetailNavigationBarExists() throws {
         
         let homeVCNavigationBar = app.navigationBars["Planets"]
         XCTAssertTrue(homeVCNavigationBar.exists)
 
     }
     
-    func test_HomeViewController_WhenTableViewPresented_CellsShouldBeEnabledForTap() throws {
+    func test_PlanetsListViewController_WhenTableViewPresented_CellsShouldBeEnabledForTap() throws {
         let myTable = app.tables.matching(identifier: "PlanetsVCTableViewAccessID")
             let cell = myTable.cells.element(matching: .cell, identifier: "PlanetCellAccessID_0")
         XCTAssertTrue(cell.isEnabled, "PlanetCells are not enalbed for user interactions")

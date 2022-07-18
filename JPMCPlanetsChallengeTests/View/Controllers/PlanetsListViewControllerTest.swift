@@ -36,14 +36,14 @@ class PlanetsListViewControllerTest: XCTestCase {
         cellID = nil
     }
 
-    func test_HomeViewController_WhenCreated_HasTableViewProperty() throws {
+    func test_PlanetsListViewController_WhenCreated_HasTableViewProperty() throws {
         let tableView = try XCTUnwrap(sut.planetsListTableView, "TableView is not connected to IBOutlet")
         
         // Check if tableView is created
         XCTAssertNotNil(tableView, "TableView is not created")
     }
     
-    func test_HomeViewController_WhenCreated_RegisterCustomTableViewCell() {
+    func test_PlanetsListViewController_WhenCreated_RegisterCustomTableViewCell() {
         
         sut.viewDidLoad()
         XCTAssertNotNil(cell,"TableView doesn't have a cell with PlanetTableViewCell")
@@ -51,7 +51,7 @@ class PlanetsListViewControllerTest: XCTestCase {
       
     }
     
-    func test_HomeViewController_WhenMusicDataAvailable_ShouldUpdateTheMusicCellProperties() throws {
+    func test_PlanetsListViewController_WhenCellCreated_CheckPlanetNameText() throws {
         
         // Create TableViewCellViewModel
         let testDetails = PlanetTableViewCellViewModel(planetName: "Test")
@@ -62,12 +62,12 @@ class PlanetsListViewControllerTest: XCTestCase {
         XCTAssertEqual(cell.planetName.text, "Test")
     }
     
-    func test_HomeViewController_WhenMusicCellCreated_ShouldCreateProperties() {
+    func test_PlanetsListViewController_WhenCellCreated_ShouldCreateProperties() {
         // Check the not nil value of planetName
         XCTAssertNotNil(cell.planetName)
     }
     
-    func test_HomeViewController_WhenCreated_ShouldBindToTheViewModel() {
+    func test_PlanetsListViewController_WhenCreated_ShouldBindToTheViewModel() {
         // Check the not nil value of planetViewModel
         XCTAssertNotNil(sut.planetViewModel)
     }
