@@ -16,7 +16,7 @@ class PlanetTableViewCell: UITableViewCell {
             return
         }
         
-        // Assign values to table view cell 
+        // Assign values to table view cell
         planetName?.text = planetCellModel.planetName
     }
     

@@ -16,7 +16,9 @@ class PlanetsListViewControllerTest: XCTestCase {
         sut.loadViewIfNeeded()
         
         cellID = "PlanetTableViewCell"
-        cell = PlanetTableViewCell(style: .default, reuseIdentifier: cellID)
+        let cellNib = UINib(nibName: "PlanetTableViewCell", bundle: .main)
+        sut.planetsListTableView.register(cellNib, forCellReuseIdentifier: "PlanetTableViewCell")
+        cell = sut.planetsListTableView.dequeueReusableCell(withIdentifier: "PlanetTableViewCell") as? PlanetTableViewCell
     }
 
     override func tearDownWithError() throws {
@@ -30,9 +32,8 @@ class PlanetsListViewControllerTest: XCTestCase {
     func test_HomeViewController_WhenCreated_HasTableViewProperty() throws {
         // Arrange
         // Act
-        
-        // Assert
         let tableView = try XCTUnwrap(sut.planetsListTableView, "TableView is not connected to IBOutlet") // This will Unwrap the optional value and we can add meaningful error
+        // Assert
         XCTAssertNotNil(tableView, "TableView is not created")
     }
     
@@ -53,22 +54,16 @@ class PlanetsListViewControllerTest: XCTestCase {
         cell.configure()
         
         // Assert
-            XCTAssertEqual(cell.planetName.text, "Test")
+        XCTAssertEqual(cell.planetName.text, "Test")
     }
     
     func test_HomeViewController_WhenMusicCellCreated_ShouldCreateProperties() {
-        // Arrange
-            
         // Assert
         XCTAssertNotNil(cell.planetName)
-
     }
     
     func test_HomeViewController_WhenCreated_ShouldBindToTheViewModel() {
-      
-//        sut.bindViewModel()
-//
-//        XCTAssertNotNil(sut.viewModel)
+        XCTAssertNotNil(sut.planetViewModel)
     }
     
     

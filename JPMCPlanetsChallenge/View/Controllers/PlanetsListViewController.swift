@@ -24,7 +24,7 @@ class PlanetsListViewController: UIViewController {
     }
     
     /// The PlanetsListViewModel is View model of PlanetsListViewController
-    private let planetViewModel = PlanetsListViewModel(planetsListService: PlanetsApiListService(),coreDataService:PlanetDataService())
+    let planetViewModel = PlanetsListViewModel(planetsListService: PlanetsApiListService(),coreDataService:PlanetDataService())
     
     override func viewDidLoad() {
         super.viewDidLoad()
