@@ -104,5 +104,20 @@ extension PlanetsListViewController : UITableViewDelegate,UITableViewDataSource 
         tableViewCell.configure()
         return tableViewCell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        self.tabBarController?.selectedIndex = 1
+
+        guard let tabBarViewControllers = self.tabBarController?.viewControllers, tabBarViewControllers.count > 0 else  {
+            return
+        }
+        
+        let detailViewController = tabBarViewControllers[1] as! PlanetsDetailViewController
+        detailViewController.planetsDetailViewModel = PlanetDetailViewModel(planet: self.planetViewModel.planetsArray.value[indexPath.row])
+        detailViewController.configure()
+        
+
+    }
 }
 

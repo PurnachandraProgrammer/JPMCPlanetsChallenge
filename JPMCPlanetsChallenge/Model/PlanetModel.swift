@@ -13,6 +13,8 @@ import Foundation
 // MARK: - Planet
 struct Planet:Codable {
     let name:String;
+    let terrain:String;
+    let climate:String;
 }
 
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D802C5FF2891930A002F4AF4 /* PlanetsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D802C5FE2891930A002F4AF4 /* PlanetsDetailViewController.swift */; };
+		D802C60328919430002F4AF4 /* PlanetDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D802C60228919430002F4AF4 /* PlanetDetailViewModel.swift */; };
 		D829827D287EFB9100FB56BD /* CDPlanet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D829827B287EFB9100FB56BD /* CDPlanet+CoreDataClass.swift */; };
 		D829827E287EFB9100FB56BD /* CDPlanet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D829827C287EFB9100FB56BD /* CDPlanet+CoreDataProperties.swift */; };
 		D8298280287F2A2E00FB56BD /* PlanetDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D829827F287F2A2E00FB56BD /* PlanetDataService.swift */; };
@@ -57,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D802C5FE2891930A002F4AF4 /* PlanetsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsDetailViewController.swift; sourceTree = "<group>"; };
+		D802C60228919430002F4AF4 /* PlanetDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDetailViewModel.swift; sourceTree = "<group>"; };
 		D829827B287EFB9100FB56BD /* CDPlanet+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDPlanet+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D829827C287EFB9100FB56BD /* CDPlanet+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDPlanet+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D829827F287F2A2E00FB56BD /* PlanetDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDataService.swift; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				D8A39A5B288486EB0071E61F /* PlanetsListViewController.swift */,
+				D802C5FE2891930A002F4AF4 /* PlanetsDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 			children = (
 				D8CCF34F287C3B6D00EF9EC1 /* PlanetsListViewModel.swift */,
 				D8CCF34D287C3AF600EF9EC1 /* PlanetTableViewCellViewModel.swift */,
+				D802C60228919430002F4AF4 /* PlanetDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -476,7 +482,9 @@
 				D8298280287F2A2E00FB56BD /* PlanetDataService.swift in Sources */,
 				D8A39A8D288488BC0071E61F /* SceneDelegate.swift in Sources */,
 				D8CCF352287C3C8400EF9EC1 /* PlanetModel.swift in Sources */,
+				D802C60328919430002F4AF4 /* PlanetDetailViewModel.swift in Sources */,
 				D829827D287EFB9100FB56BD /* CDPlanet+CoreDataClass.swift in Sources */,
+				D802C5FF2891930A002F4AF4 /* PlanetsDetailViewController.swift in Sources */,
 				D8A39A60288487380071E61F /* PlanetTableViewCell.swift in Sources */,
 				D829827E287EFB9100FB56BD /* CDPlanet+CoreDataProperties.swift in Sources */,
 				D8CCF354287C44F300EF9EC1 /* PlanetsApiListService.swift in Sources */,
